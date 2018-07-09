@@ -190,6 +190,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &262346720 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4405671134721822, guid: 0f316f3ea25ad4b4fae31718bcd7719d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1889385546}
 --- !u!1001 &402421071
 Prefab:
   m_ObjectHideFlags: 0
@@ -361,7 +366,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.5}
+  m_Size: {x: 2, y: 2.1}
   m_EdgeRadius: 0
 --- !u!114 &551669009
 MonoBehaviour:
@@ -380,6 +385,53 @@ MonoBehaviour:
   rb: {fileID: 0}
   grounded: 1
   groundtouched: []
+--- !u!1001 &620198099
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 262346720}
+    m_Modifications:
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.62772214
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.8299999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 65511378248831618, guid: 1826e5bb0fe854c2bac6de32bdbac715,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1145456762
 Prefab:
   m_ObjectHideFlags: 0
