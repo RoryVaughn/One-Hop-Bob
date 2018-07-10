@@ -12,6 +12,7 @@ public class Playermove : MonoBehaviour {
     public List<Collider2D> groundtouched = new List<Collider2D>();
 
 
+
     void OnCollisionEnter2D(Collision2D c)
     {
         ContactPoint2D[] points = new ContactPoint2D[2];
