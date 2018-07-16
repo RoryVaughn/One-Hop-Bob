@@ -19,10 +19,12 @@ public class cameraScript : MonoBehaviour {
         targetHeight = 5 + (ScoreScript.scoreValue * 4);
         if (targetHeight < main.GetComponent<Transform>().position.y)
         {
+            //downward scroll speed
             CurrentscrollSpeed = 1;
         }
         else
         {
+            //upward scroll speed
             CurrentscrollSpeed = DefaultscrollSpeed;
         }
         main.GetComponent<Transform>().position = Vector3.MoveTowards(main.GetComponent<Transform>().position, new Vector3(0, targetHeight, -10),CurrentscrollSpeed);
