@@ -28,22 +28,21 @@ public class PlatformMove : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        platy = platform.transform.position.y;
-        platz = platform.transform.position.z;
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
         //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
         platx = Mathf.MoveTowards(platform.transform.position.x, points[target].position.x, Time.deltaTime * Movespeed);
-        platy = platform.transform.position.y;
-        platz = platform.transform.position.z;
+        platy = Mathf.MoveTowards(platform.transform.position.y, points[target].position.y, Time.deltaTime * Movespeed);
+        platz = Mathf.MoveTowards(platform.transform.position.z, points[target].position.z, Time.deltaTime * Movespeed);
         currentpos = new Vector3(platx,platy,platz);
 
 
         platform.transform.position = currentpos;
         
-        if (platform.transform.position.x == points[target].position.x)
+        if (platform.transform.position == points[target].position)
         {
             target++;
             if (target >= points.Length)

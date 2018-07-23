@@ -10,7 +10,6 @@ public class Playermove : MonoBehaviour {
     public float highJumpPower;
     public float fallMultiplier;
     public float walkspeed;
-    public float maxSpeed;
     public Rigidbody2D rb;
     public bool grounded;
     public List<Collider2D> groundtouched = new List<Collider2D>();
@@ -66,17 +65,11 @@ public class Playermove : MonoBehaviour {
         }
         //Horzontal walking input
         hMove = Input.GetAxis("Horizontal");
-        rb.AddForce(Vector3.right * walkspeed * hMove, ForceMode2D.Force);
 
-        //This caps the maximum speed the player can achieve, to avoid infinitely building momentum
-        if (rb.velocity.x > maxSpeed)
-        {
-            rb.velocity = new Vector2(maxSpeed,rb.velocity.y);
-        }
-        if (rb.velocity.x < -maxSpeed)
-        {
-            rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
-        }
+        //this is the current method of movement
+        transform.position += new Vector3(hMove,0,0)  * walkspeed * Time.deltaTime;
+
+
         //The following check is to make the player unable to jump twice without grounding first
         if (groundtouched.Count != 0)
         {

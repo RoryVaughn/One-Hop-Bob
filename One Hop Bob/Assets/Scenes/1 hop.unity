@@ -479,8 +479,8 @@ MonoBehaviour:
   testingRespawnMode: 1
   highJumpPower: 10
   fallMultiplier: 4
-  walkspeed: 10
-  maxSpeed: 4
+  walkspeed: 4
+  maxSpeed: 0
   rb: {fileID: 0}
   grounded: 1
   groundtouched: []
@@ -695,7 +695,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -744,6 +744,15 @@ Prefab:
     - target: {fileID: 4387056933984020, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405671134721822, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114646527987915042, guid: 0f316f3ea25ad4b4fae31718bcd7719d,
+        type: 2}
+      propertyPath: Movespeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
