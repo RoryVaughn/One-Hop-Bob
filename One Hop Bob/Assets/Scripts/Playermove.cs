@@ -45,7 +45,6 @@ public class Playermove : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
         Respawn = transform.position;
         rb = GetComponent<Rigidbody2D>();
 

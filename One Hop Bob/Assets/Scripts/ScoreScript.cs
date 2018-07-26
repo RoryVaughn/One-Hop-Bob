@@ -10,10 +10,13 @@ public class ScoreScript : MonoBehaviour {
     public static int scoreValue = 0;
     Text score;
     public GameObject Player;
+    public int health;
+
 
 	// Use this for initialization
 	void Start () {
         score = GetComponent<Text>();
+        health = 3;
 	}
 	
 	// Update is called once per frame
