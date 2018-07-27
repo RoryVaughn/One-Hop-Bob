@@ -8,14 +8,15 @@ public class ScoreScript : MonoBehaviour {
 
 
     public static int scoreValue = 0;
-    Text score;
+    public Text score;
     public GameObject Player;
+
     public int health;
 
 
 	// Use this for initialization
 	void Start () {
-        score = GetComponent<Text>();
+        score = GameObject.Find("Score Text").GetComponent<Text>();
         health = 3;
 	}
 	

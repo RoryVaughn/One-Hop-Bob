@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 199507683}
   - component: {fileID: 199507687}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8610af7bf753f4fafe7fb7a2674fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 0}
   Player: {fileID: 551669004}
   health: 3
 --- !u!1 &261939731 stripped
@@ -355,6 +356,49 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &421777245 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1396596834794024, guid: 1826e5bb0fe854c2bac6de32bdbac715,
+    type: 2}
+  m_PrefabInternal: {fileID: 620198099}
+--- !u!114 &421777247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421777245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3801b671be56f764287eb994d6aafd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  scoreBoard: {fileID: 0}
+--- !u!61 &421777248
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421777245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.27, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 0.82}
+  m_EdgeRadius: 0
 --- !u!1 &551669004
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,11 +618,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.23
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.8299999
+      value: 0.811
       objectReference: {fileID: 0}
     - target: {fileID: 4567372174845090, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
       propertyPath: m_LocalPosition.z
@@ -609,7 +653,8 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65511378248831618, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1826e5bb0fe854c2bac6de32bdbac715, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &699262631
@@ -644,8 +689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 69, y: -41}
-  m_SizeDelta: {x: 97.3, y: 47}
+  m_AnchoredPosition: {x: 83.48001, y: -49.149994}
+  m_SizeDelta: {x: 126.26, y: 63.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699262633
 MonoBehaviour:
