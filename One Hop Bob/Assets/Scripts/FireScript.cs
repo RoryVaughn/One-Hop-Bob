@@ -8,17 +8,19 @@ public class FireScript : MonoBehaviour {
     [SerializeField]
     private GameObject scoreBoard;
 
-    void OnCollisionEnter2D(Collision2D c)
+    void OnTriggerEnter2D(Collider2D c)
     {
         if (c.gameObject == Player)
         {
             takedamage();
-        }
 
+        }
     }
+
     void takedamage()
     {
         scoreBoard.GetComponent<ScoreScript>().health--;
+        scoreBoard.GetComponent<ScoreScript>().healthCheck();
         Debug.Log("work");
     }
 

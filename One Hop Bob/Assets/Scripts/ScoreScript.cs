@@ -8,16 +8,22 @@ public class ScoreScript : MonoBehaviour {
 
 
     public static int scoreValue = 0;
-    public Text score;
+    private Text score;
     public GameObject Player;
+    private Slider Bar;
 
     public int health;
 
-
+    public void healthCheck()
+    {
+        Bar.value = health;
+    }
 	// Use this for initialization
 	void Start () {
+        Bar = GameObject.Find("Health").GetComponent<Slider>();
         score = GameObject.Find("Score Text").GetComponent<Text>();
         health = 3;
+        Bar.value = health;
 	}
 	
 	// Update is called once per frame
