@@ -21,8 +21,8 @@ public class SettingsMenu : MonoBehaviour {
 
         resolutionDropdown.ClearOptions();
 
+        //this loops through and adds a computer's own reloutions rather than giving preset ones
         List<string> choices = new List<string>();
-
         int currentRes = 0;
         for (int i = 0; i < resolutions.Length; i++)
         {
