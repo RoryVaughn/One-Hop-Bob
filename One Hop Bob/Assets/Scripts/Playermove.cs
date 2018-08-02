@@ -12,6 +12,7 @@ public class Playermove : MonoBehaviour {
     public float walkspeed;
     public Rigidbody2D rb;
     public bool grounded;
+    public GameObject lastTouched;
     public List<Collider2D> groundtouched = new List<Collider2D>();
     public List <GameObject> Achieved = new List<GameObject>();
     float hMove;
@@ -28,6 +29,7 @@ public class Playermove : MonoBehaviour {
         {
             if (points[i].normal == Vector2.up && !groundtouched.Contains(c.collider))
             {
+                lastTouched = c.gameObject;
                 groundtouched.Add(c.collider);
                 if (!Achieved.Contains(c.gameObject))
                 {

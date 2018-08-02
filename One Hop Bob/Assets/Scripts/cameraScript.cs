@@ -6,17 +6,23 @@ public class cameraScript : MonoBehaviour {
 
 
     public Camera main;
+    public GameObject player;
+
     public float DefaultscrollSpeed;
     public float CurrentscrollSpeed;
     float targetHeight;
 	// Use this for initialization
 	void Start () {
-		
+        player = GameObject.Find("1HopBob");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        targetHeight = 1 + (ScoreScript.scoreValue * 4);
+        if (player.GetComponent<Playermove>().grounded)
+        {
+            targetHeight = (4 + player.GetComponent<Playermove>().lastTouched.transform.position.y);
+        }
+
         if (targetHeight < main.GetComponent<Transform>().position.y)
         {
             //downward scroll speed

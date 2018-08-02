@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8610af7bf753f4fafe7fb7a2674fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 0}
   Player: {fileID: 551669004}
   health: 3
 --- !u!1 &261939731 stripped
@@ -387,7 +388,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -613,7 +614,9 @@ MonoBehaviour:
   walkspeed: 4
   rb: {fileID: 0}
   grounded: 1
+  lastTouched: {fileID: 0}
   groundtouched: []
+  Achieved: []
 --- !u!1 &581708052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +1005,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1142,7 +1145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -115.2, y: -32}
+  m_AnchoredPosition: {x: -115.20001, y: -32}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270568168
@@ -1310,6 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 1426863370}
+  player: {fileID: 0}
   DefaultscrollSpeed: 0.05
   CurrentscrollSpeed: 0.05
 --- !u!1 &1498749521
@@ -1560,7 +1564,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1611,7 +1615,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.8
+      value: -0.69
       objectReference: {fileID: 0}
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
       propertyPath: m_LocalPosition.y

@@ -7,7 +7,7 @@ public class ScoreScript : MonoBehaviour {
 
 
 
-    public static int scoreValue = 0;
+    public static int scoreValue = -1;
     public Text score;
     public GameObject Player;
     private Slider Bar;
@@ -23,6 +23,7 @@ public class ScoreScript : MonoBehaviour {
         Bar = GameObject.Find("Health").GetComponent<Slider>();
         score = GameObject.Find("Score Text").GetComponent<Text>();
         health = 3;
+
         Bar.value = health;
 	}
 	
