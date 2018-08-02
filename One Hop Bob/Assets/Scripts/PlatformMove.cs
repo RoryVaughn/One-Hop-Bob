@@ -9,6 +9,7 @@ public class PlatformMove : MonoBehaviour {
     public int Movespeed;
     public Vector3 currentpos;
     public Transform[] points;
+    bool touched;
     public int target;
     public float platx;
     public float platy;
@@ -28,7 +29,7 @@ public class PlatformMove : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        
+        bool touched = false;
     }
 	
 	// Update is called once per frame

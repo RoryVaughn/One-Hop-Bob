@@ -13,8 +13,8 @@ public class Playermove : MonoBehaviour {
     public Rigidbody2D rb;
     public bool grounded;
     public List<Collider2D> groundtouched = new List<Collider2D>();
+    public List <GameObject> Achieved = new List<GameObject>();
     float hMove;
-
 
 
     void OnCollisionEnter2D(Collision2D c)
@@ -29,6 +29,12 @@ public class Playermove : MonoBehaviour {
             if (points[i].normal == Vector2.up && !groundtouched.Contains(c.collider))
             {
                 groundtouched.Add(c.collider);
+                if (!Achieved.Contains(c.gameObject))
+                {
+                    Achieved.Add(c.gameObject);
+                    ScoreScript.scoreValue++;
+
+                }
                 return;
             } 
         }
@@ -47,6 +53,7 @@ public class Playermove : MonoBehaviour {
     void Start() {
         Respawn = transform.position;
         rb = GetComponent<Rigidbody2D>();
+
 
 
     }

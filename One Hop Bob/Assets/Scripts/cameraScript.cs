@@ -16,7 +16,7 @@ public class cameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        targetHeight = 5 + (ScoreScript.scoreValue * 4);
+        targetHeight = 1 + (ScoreScript.scoreValue * 4);
         if (targetHeight < main.GetComponent<Transform>().position.y)
         {
             //downward scroll speed
