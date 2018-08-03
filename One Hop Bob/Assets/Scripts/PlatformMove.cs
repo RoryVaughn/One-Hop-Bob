@@ -6,7 +6,7 @@ public class PlatformMove : MonoBehaviour {
 
 
     public GameObject platform;
-    public int Movespeed;
+    public float Movespeed;
     public Vector3 currentpos;
     public Transform[] points;
     bool touched;

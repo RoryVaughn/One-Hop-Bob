@@ -2,36 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireScript : MonoBehaviour {
+public class HazardScript : MonoBehaviour {
 
-    public GameObject Player;
     [SerializeField]
+    private GameObject Player;
     private GameObject scoreBoard;
+
+    public int power;
 
     void OnTriggerEnter2D(Collider2D c)
     {
         if (c.gameObject == Player)
         {
             takedamage();
-
         }
     }
 
     public void takedamage()
     {
-        scoreBoard.GetComponent<ScoreScript>().health--;
+        scoreBoard.GetComponent<ScoreScript>().health -= power;
         scoreBoard.GetComponent<ScoreScript>().healthCheck();
         Debug.Log("work");
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         Player = GameObject.FindWithTag("Player");
         scoreBoard = GameObject.Find("HUD");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
