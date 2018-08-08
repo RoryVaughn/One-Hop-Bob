@@ -15,6 +15,7 @@ public class PlatformMove : MonoBehaviour {
     public float platy;
     public float platz;
 
+
     void OnCollisionEnter2D(Collision2D c)
     {
         //this allows the player to comtinue to move on the platform when he lands on it.
@@ -31,9 +32,9 @@ public class PlatformMove : MonoBehaviour {
     void Start () {
         bool touched = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+    
+    // Update is called once per frame
+    void Update () {
         //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
         platx = Mathf.MoveTowards(platform.transform.position.x, points[target].position.x, Time.deltaTime * Movespeed);
         platy = Mathf.MoveTowards(platform.transform.position.y, points[target].position.y, Time.deltaTime * Movespeed);
@@ -53,5 +54,5 @@ public class PlatformMove : MonoBehaviour {
         }
 
 
-	}
+    }
 }

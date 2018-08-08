@@ -12,7 +12,7 @@ public class MeleeEnemy : MonoBehaviour {
     {
         if (c.gameObject == Player)
         {
-            fire.takedamage();
+            
 
         }
     }
