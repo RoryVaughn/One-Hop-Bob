@@ -82,6 +82,7 @@ public class Playermove : MonoBehaviour {
         if (groundtouched.Count != 0)
         {
             grounded = true;
+
         }
         else grounded = false;
 

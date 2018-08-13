@@ -9,7 +9,7 @@ public class PlatformMove : MonoBehaviour {
     public float Movespeed;
     public Vector3 currentpos;
     public Transform[] points;
-    bool touched;
+    public bool touched;
     public int target;
     public float platx;
     public float platy;

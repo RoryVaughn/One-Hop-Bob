@@ -12,7 +12,7 @@ public class ScoreScript : MonoBehaviour {
     public GameObject Player;
     private Slider Bar;
 
-    public int health;
+    public float health;
 
     public void healthCheck()
     {
@@ -22,7 +22,7 @@ public class ScoreScript : MonoBehaviour {
 	void Start () {
         Bar = GameObject.Find("Health").GetComponent<Slider>();
         score = GameObject.Find("Score Text").GetComponent<Text>();
-        health = 3;
+        health = 3.0f;
 
         Bar.value = health;
 	}
