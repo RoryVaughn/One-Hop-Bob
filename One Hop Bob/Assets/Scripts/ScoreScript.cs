@@ -12,7 +12,7 @@ public class ScoreScript : MonoBehaviour {
     public GameObject Player;
     private Slider Bar;
 
-    public static float health;
+    public static float health = 3.0f;
 
     public void healthCheck()
     {
@@ -30,5 +30,6 @@ public class ScoreScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         score.text = "Score: " + scoreValue;
+        Bar.value = health;
 	}
 }
