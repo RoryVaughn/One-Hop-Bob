@@ -18,6 +18,8 @@ public class Playermove : MonoBehaviour {
     float hMove;
 
 
+
+
     void OnCollisionEnter2D(Collision2D c)
     {
         //adds objects that the player collides with to an array (only once) 

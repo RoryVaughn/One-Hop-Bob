@@ -12,7 +12,7 @@ public class ScoreScript : MonoBehaviour {
     public GameObject Player;
     private Slider Bar;
 
-    public float health;
+    public static float health;
 
     public void healthCheck()
     {

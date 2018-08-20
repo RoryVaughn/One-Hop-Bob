@@ -20,7 +20,7 @@ public class HazardScript : MonoBehaviour {
 
     public void takedamage()
     {
-        scoreBoard.GetComponent<ScoreScript>().health -= power;
+        ScoreScript.health -= power;
         scoreBoard.GetComponent<ScoreScript>().healthCheck();
         Debug.Log("work");
     }

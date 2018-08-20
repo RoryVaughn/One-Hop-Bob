@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
 
-    Vector2 position;
+
     Sprite health;
     Sprite doubleJump;
     Sprite Fireball;
@@ -12,11 +12,15 @@ public class PowerUp : MonoBehaviour {
     Sprite Speed;
     Sprite Shield;
     Sprite Bow;
-    private float speed = 6;
+
+    Vector2 pos;
+    private float speed = 1;
     public bool fly = true;
     public float Delay;
     public GameObject Owner;
     public int powerNum;
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,6 +28,16 @@ public class PowerUp : MonoBehaviour {
         {
             Owner = collision.gameObject;
 
+            switch (powerNum)
+            {
+                case 0:
+                    {
+                        ScoreScript.health++;
+
+                    }
+                    break;
+
+            }
             Destroy(this.gameObject);
 
         }
@@ -33,11 +47,13 @@ public class PowerUp : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        pos = transform.position;
         switch(powerNum)
         {
             case 0:
                 {
-                    gameObject.GetComponent<SpriteRenderer>().sprite 
+                    //gameObject.GetComponent<SpriteRenderer>().sprite = Freeze;
+
                 }
                 break;
 
@@ -48,6 +64,7 @@ public class PowerUp : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        
         Delay += Time.fixedDeltaTime;
         //the following block of code makes the powerups appear to float
         if (Delay >= 0.5f)
@@ -56,10 +73,14 @@ public class PowerUp : MonoBehaviour {
             fly = !fly;
         }
         if (fly == true)
-            position.y += Time.deltaTime * speed;
+            
+            pos.y += Time.fixedDeltaTime * speed;
         if (fly == false)
-            position.y -= Time.deltaTime * speed;
-        transform.position = new Vector3(position.x, position.y);
+
+            pos.y -= Time.fixedDeltaTime * speed;
+
+        
+        transform.position = new Vector2(transform.position.x, pos.y);
     
 	}
 }
