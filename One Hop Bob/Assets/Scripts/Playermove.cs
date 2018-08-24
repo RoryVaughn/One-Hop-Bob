@@ -16,6 +16,10 @@ public class Playermove : MonoBehaviour {
     public List<Collider2D> groundtouched = new List<Collider2D>();
     public List <GameObject> Achieved = new List<GameObject>();
     float hMove;
+    public bool boostActive;
+    private float boostSpeed;
+    public float boostDelay;
+
 
 
 
@@ -55,6 +59,7 @@ public class Playermove : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        boostSpeed = 1;
         Respawn = transform.position;
         rb = GetComponent<Rigidbody2D>();
 
@@ -65,30 +70,21 @@ public class Playermove : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        //Testing respawn check
-        if (testingRespawnMode)
-        {
-            if (transform.position.y < -1.0f)
-            {
-                transform.position = Respawn;
-            }
-        }
         //Horzontal walking input
         hMove = Input.GetAxis("Horizontal");
 
         //this is the current method of movement
-        transform.position += new Vector3(hMove,0,0)  * walkspeed * Time.deltaTime;
-
+        transform.position += new Vector3(hMove,0,0) * boostSpeed * walkspeed * Time.deltaTime;
 
         //The following check is to make the player unable to jump twice without grounding first
         if (groundtouched.Count != 0)
         {
             grounded = true;
-
         }
         else grounded = false;
 
         //This allows the player to achievea higher jump by holding the jump button for longer.
+
         if (rb.velocity.y < 0)
         {
             rb.velocity += (Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1f) * Time.deltaTime);
@@ -101,6 +97,39 @@ public class Playermove : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
         {
             rb.AddForce(Vector2.up * highJumpPower, ForceMode2D.Impulse);
+        }
+
+        //////////////////////////////////////////////////
+        //// BELOW THIS POINT IS POWER UP INFORMATION ////
+        //////////////////////////////////////////////////
+
+        //Speed Boost
+        if (boostDelay >= 7.5f)
+        {
+            boostActive = false;
+        }
+        if (boostActive)
+        {
+            boostSpeed = 2.0f;
+            boostDelay += Time.fixedDeltaTime;
+        }
+        else
+        {
+            boostSpeed = 1;
+            boostDelay = 0;
+        }
+
+        /////////////////////////////////////////////////////////////////////////////////
+        ////BELOW THIS POINT IS DEBUGGING CODE THAT SHOULD BE CHANGED WHEN BUILDING! ////
+        /////////////////////////////////////////////////////////////////////////////////
+
+        //Testing respawn check
+        if (testingRespawnMode)
+        {
+            if (transform.position.y < -1.0f)
+            {
+                transform.position = Respawn;
+            }
         }
     }
 }

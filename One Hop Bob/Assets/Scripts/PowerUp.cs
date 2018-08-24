@@ -14,6 +14,8 @@ public class PowerUp : MonoBehaviour {
     Sprite Bow;
 
     Vector2 pos;
+    private GameObject scoreBoard;
+    private GameObject Player;
     private float speed = 1;
     public bool fly = true;
     public float Delay;
@@ -33,30 +35,54 @@ public class PowerUp : MonoBehaviour {
                 case 0:
                     {
                         ScoreScript.health++;
+                        scoreBoard.GetComponent<ScoreScript>().healthCheck();
+                    }
+                    break;
+                case 1:
+                    {
+                        Player.GetComponent<Playermove>().boostActive = true;
+
+                    }
+                    break;
+                case 2:
+                    {
+
+                    }
+                    break;
+                case 3:
+                    {
+
+                    }
+                    break;
+                case 4:
+                    {
+
+                    }
+                    break;
+                case 5:
+                    {
 
                     }
                     break;
 
             }
             Destroy(this.gameObject);
-
         }
-
     }
 
 
     // Use this for initialization
     void Start () {
+        scoreBoard = GameObject.Find("HUD");
+        Player = GameObject.FindWithTag("Player");
         pos = transform.position;
         switch(powerNum)
         {
             case 0:
                 {
                     //gameObject.GetComponent<SpriteRenderer>().sprite = Freeze;
-
                 }
                 break;
-
         }
 	}
 

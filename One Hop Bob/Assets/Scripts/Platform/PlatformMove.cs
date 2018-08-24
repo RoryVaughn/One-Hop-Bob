@@ -7,6 +7,7 @@ public class PlatformMove : MonoBehaviour {
 
     public GameObject platform;
     public float Movespeed;
+    public bool FrozenPlat;
     public Vector3 currentpos;
     public Transform[] points;
     public bool touched;
@@ -35,12 +36,14 @@ public class PlatformMove : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
-        platx = Mathf.MoveTowards(platform.transform.position.x, points[target].position.x, Time.deltaTime * Movespeed);
-        platy = Mathf.MoveTowards(platform.transform.position.y, points[target].position.y, Time.deltaTime * Movespeed);
-        platz = Mathf.MoveTowards(platform.transform.position.z, points[target].position.z, Time.deltaTime * Movespeed);
-        currentpos = new Vector3(platx,platy,platz);
-
+        if (!FrozenPlat)
+        {
+            //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
+            platx = Mathf.MoveTowards(platform.transform.position.x, points[target].position.x, Time.deltaTime * Movespeed);
+            platy = Mathf.MoveTowards(platform.transform.position.y, points[target].position.y, Time.deltaTime * Movespeed);
+            platz = Mathf.MoveTowards(platform.transform.position.z, points[target].position.z, Time.deltaTime * Movespeed);
+            currentpos = new Vector3(platx, platy, platz);
+        }
 
         platform.transform.position = currentpos;
         
