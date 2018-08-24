@@ -46,17 +46,17 @@ public class PowerUp : MonoBehaviour {
                     break;
                 case 2:
                     {
-
+                        Player.GetComponent<Playermove>().hasFireball = true;
                     }
                     break;
                 case 3:
                     {
-
+                        Player.GetComponent<Playermove>().hasArrow = true;
                     }
                     break;
                 case 4:
                     {
-
+                        PlatformMove.freezeActive = true;
                     }
                     break;
                 case 5:

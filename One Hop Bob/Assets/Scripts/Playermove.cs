@@ -5,7 +5,6 @@ using UnityEngine;
 public class Playermove : MonoBehaviour {
 
     public GameObject Player;
-    public bool testingRespawnMode;
     private Vector3 Respawn;
     public float highJumpPower;
     public float fallMultiplier;
@@ -16,9 +15,19 @@ public class Playermove : MonoBehaviour {
     public List<Collider2D> groundtouched = new List<Collider2D>();
     public List <GameObject> Achieved = new List<GameObject>();
     float hMove;
+
+    //PowerUpstuff
     public bool boostActive;
     private float boostSpeed;
     public float boostDelay;
+
+    public bool hasFireball;
+    GameObject fireBall;
+    public bool hasArrow;
+    public bool hasShield;
+
+    //DebugStuff
+    public bool testingRespawnMode;
 
 
 
@@ -62,6 +71,7 @@ public class Playermove : MonoBehaviour {
         boostSpeed = 1;
         Respawn = transform.position;
         rb = GetComponent<Rigidbody2D>();
+        fireBall = Resources.Load<GameObject>("FireBall");
 
 
 
@@ -104,19 +114,23 @@ public class Playermove : MonoBehaviour {
         //////////////////////////////////////////////////
 
         //Speed Boost
-        if (boostDelay >= 7.5f)
-        {
-            boostActive = false;
-        }
         if (boostActive)
         {
-            boostSpeed = 2.0f;
-            boostDelay += Time.fixedDeltaTime;
+            Boost();
         }
-        else
+
+
+        //Fireball and Arrow
+        if (hasArrow)
         {
-            boostSpeed = 1;
-            boostDelay = 0;
+
+        }
+        if (hasFireball)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                fireBall = Instantiate(fireBall, new Vector3(transform.position.x + 2.0f, transform.position.y + 1.0f, transform.position.z), Quaternion.identity);
+            }
         }
 
         /////////////////////////////////////////////////////////////////////////////////
@@ -131,5 +145,24 @@ public class Playermove : MonoBehaviour {
                 transform.position = Respawn;
             }
         }
+    }
+
+
+    public void Boost()
+    {
+            if (boostDelay >= 7.5f)
+            {
+                boostActive = false;
+            }
+            if (boostActive)
+            {
+                boostSpeed = 2.0f;
+                boostDelay += Time.fixedDeltaTime;
+            }
+            else
+            {
+                boostSpeed = 1;
+                boostDelay = 0;
+            }
     }
 }

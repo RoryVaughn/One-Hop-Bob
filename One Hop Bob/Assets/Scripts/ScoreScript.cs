@@ -14,6 +14,7 @@ public class ScoreScript : MonoBehaviour {
 
     public static float health = 3.0f;
 
+
     public void healthCheck()
     {
         Bar.value = health;

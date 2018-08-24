@@ -491,7 +491,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 40231063}
   Movespeed: 0
-  FrozenPlat: 0
   currentpos: {x: 3.9148283, y: 172, z: 0}
   points:
   - {fileID: 1806475006}
@@ -501,6 +500,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  freezeDelay: 0
 --- !u!61 &40231066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1461,7 +1461,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 242128160}
   Movespeed: 4
-  FrozenPlat: 0
   currentpos: {x: -3.2512503, y: 148, z: 0}
   points:
   - {fileID: 11185428}
@@ -1471,6 +1470,7 @@ MonoBehaviour:
   platx: -3.2512503
   platy: 148
   platz: 0
+  freezeDelay: 0
 --- !u!61 &242128163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1647,7 +1647,7 @@ Prefab:
     - target: {fileID: 114804726319761386, guid: 8c65d0db48b23438da5bed8cbe3adada,
         type: 2}
       propertyPath: powerNum
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c65d0db48b23438da5bed8cbe3adada, type: 2}
@@ -2271,7 +2271,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 403767726}
   Movespeed: 3
-  FrozenPlat: 0
   currentpos: {x: -3.2570443, y: 156, z: 0}
   points:
   - {fileID: 1035934441}
@@ -2281,6 +2280,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  freezeDelay: 0
 --- !u!61 &403767729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2861,7 +2861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 551669004}
-  testingRespawnMode: 1
   highJumpPower: 10
   fallMultiplier: 4
   walkspeed: 4
@@ -2872,6 +2871,10 @@ MonoBehaviour:
   Achieved: []
   boostActive: 0
   boostDelay: 0
+  hasFireball: 0
+  hasArrow: 0
+  hasShield: 0
+  testingRespawnMode: 1
 --- !u!1 &556117561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,7 +3315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 690883614}
   Movespeed: 2
-  FrozenPlat: 0
   currentpos: {x: 3.9148283, y: 172, z: 0}
   points:
   - {fileID: 1999341491}
@@ -3322,6 +3324,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  freezeDelay: 0
 --- !u!61 &690883617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4317,7 +4320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 920306988}
   Movespeed: 3
-  FrozenPlat: 0
   currentpos: {x: -3.2512503, y: 148, z: 0}
   points:
   - {fileID: 1057439361}
@@ -4327,6 +4329,7 @@ MonoBehaviour:
   platx: -3.2512503
   platy: 148
   platz: 0
+  freezeDelay: 0
 --- !u!61 &920306991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4442,7 +4445,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 976766770}
   Movespeed: 2
-  FrozenPlat: 0
   currentpos: {x: -3.2570443, y: 156, z: 0}
   points:
   - {fileID: 217738283}
@@ -4452,6 +4454,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  freezeDelay: 0
 --- !u!61 &976766773
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4670,7 +4673,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1023697315}
   Movespeed: 2
-  FrozenPlat: 0
   currentpos: {x: 3.9148283, y: 172, z: 0}
   points:
   - {fileID: 465119425}
@@ -4680,6 +4682,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  freezeDelay: 0
 --- !u!61 &1023697318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4965,7 +4968,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1100462095}
   Movespeed: 2
-  FrozenPlat: 0
   currentpos: {x: 3.9148283, y: 172, z: 0}
   points:
   - {fileID: 89276035}
@@ -4975,6 +4977,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  freezeDelay: 0
 --- !u!61 &1100462098
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5842,7 +5845,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1274047946}
   Movespeed: 0
-  FrozenPlat: 0
   currentpos: {x: 3.9148283, y: 172, z: 0}
   points:
   - {fileID: 1136526129}
@@ -5852,6 +5854,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  freezeDelay: 0
 --- !u!61 &1274047949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6035,7 +6038,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1331307162}
   Movespeed: 1
-  FrozenPlat: 0
   currentpos: {x: -3.2570443, y: 156, z: 0}
   points:
   - {fileID: 1578459355}
@@ -6045,6 +6047,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  freezeDelay: 0
 --- !u!61 &1331307165
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7504,7 +7507,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1649336767}
   Movespeed: 2
-  FrozenPlat: 0
   currentpos: {x: 3.9148283, y: 172, z: 0}
   points:
   - {fileID: 1909757230}
@@ -7514,6 +7516,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  freezeDelay: 0
 --- !u!61 &1649336770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9039,7 +9042,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 2013570205}
   Movespeed: 2
-  FrozenPlat: 0
   currentpos: {x: 3.9148283, y: 172, z: 0}
   points:
   - {fileID: 1166678505}
@@ -9049,6 +9051,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  freezeDelay: 0
 --- !u!61 &2013570208
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9129,7 +9132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 2029442097}
   Movespeed: 2
-  FrozenPlat: 0
   currentpos: {x: -3.2570443, y: 156, z: 0}
   points:
   - {fileID: 973308476}
@@ -9139,6 +9141,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  freezeDelay: 0
 --- !u!61 &2029442100
 BoxCollider2D:
   m_ObjectHideFlags: 0

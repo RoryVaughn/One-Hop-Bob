@@ -7,7 +7,6 @@ public class PlatformMove : MonoBehaviour {
 
     public GameObject platform;
     public float Movespeed;
-    public bool FrozenPlat;
     public Vector3 currentpos;
     public Transform[] points;
     public bool touched;
@@ -16,6 +15,9 @@ public class PlatformMove : MonoBehaviour {
     public float platy;
     public float platz;
 
+    public static bool Frozen;
+    public static bool freezeActive;
+    public float freezeDelay;
 
     void OnCollisionEnter2D(Collision2D c)
     {
@@ -36,7 +38,7 @@ public class PlatformMove : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        if (!FrozenPlat)
+        if (!Frozen)
         {
             //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
             platx = Mathf.MoveTowards(platform.transform.position.x, points[target].position.x, Time.deltaTime * Movespeed);
@@ -56,6 +58,19 @@ public class PlatformMove : MonoBehaviour {
             }
         }
 
-
+        if (freezeDelay >= 7.5f)
+        {
+            freezeActive = false;
+        }
+        if (freezeActive)
+        {
+            Frozen = true;
+            freezeDelay += Time.fixedDeltaTime;
+        }
+        else
+        {
+            Frozen = false;
+            freezeDelay = 0;
+        }
     }
 }

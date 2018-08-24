@@ -7,6 +7,10 @@ public class HazardScript : MonoBehaviour {
     [SerializeField]
     private GameObject Player;
     private GameObject scoreBoard;
+    public bool isProjectile;
+    private float moveSpeed;
+    private float newX;
+    private float newY;
 
     public int power;
 
@@ -14,7 +18,15 @@ public class HazardScript : MonoBehaviour {
     {
         if (c.gameObject == Player)
         {
-            takedamage();
+            if (!c.GetComponent<Playermove>().hasShield)
+            {
+                takedamage();
+            }
+            else 
+            {
+                c.GetComponent<Playermove>().hasShield = false;
+            }
+
         }
     }
 
@@ -30,11 +42,17 @@ public class HazardScript : MonoBehaviour {
     {
         Player = GameObject.FindWithTag("Player");
         scoreBoard = GameObject.Find("HUD");
+        moveSpeed = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (isProjectile)
+        {
+            newX = Mathf.MoveTowards(transform.position.x, transform.position.x + 1.0f, Time.deltaTime * moveSpeed);
+            newY = Mathf.MoveTowards(transform.position.y, transform.position.y + 1.0f, Time.deltaTime * moveSpeed);
+            gameObject.transform.position = new Vector2(newX, newY);
+        }
     }
 }
