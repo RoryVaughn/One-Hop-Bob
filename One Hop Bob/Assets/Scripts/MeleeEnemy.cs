@@ -5,12 +5,13 @@ using UnityEngine;
 public class MeleeEnemy : MonoBehaviour {
 
     public float movementSpeed;
+    float movementDirection;
     private GameObject Player;
-    Collider2D col;
+    BoxCollider2D col;
     public Vector3 currentpos;
 
-    private Collider2D leftCheck;
-    private Collider2D rightCheck;
+    private Collider2D frontCheck;
+
 
     public float platx;
     public float platy;
@@ -22,9 +23,9 @@ public class MeleeEnemy : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        col = gameObject.GetComponent<Collider2D>();
-        leftCheck = gameObject.transform.GetChild(0).GetComponent<BoxCollider2D>();
-        rightCheck = gameObject.transform.GetChild(1).GetComponent<BoxCollider2D>();
+        col = gameObject.GetComponent<BoxCollider2D>();
+        frontCheck = gameObject.transform.GetChild(0).GetComponent<BoxCollider2D>();
+        movementDirection = 1;
     }
 	
 	// Update is called once per frame
@@ -32,8 +33,23 @@ public class MeleeEnemy : MonoBehaviour {
 
         if (!Frozen)
         {
-            //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
-            platx = Mathf.MoveTowards(transform.position.x, transform.position.x, Time.deltaTime * movementSpeed);
+            if (!frontCheck.IsTouching(GetComponentInParent<BoxCollider2D>()))
+            {
+                //if (gameObject.transform.forward == new Vector3(0,1, 0))
+                //{
+                transform.forward = -transform.forward;
+                    Debug.Log("work1");
+                //}
+                //else{
+                //    transform.Rotate(new Vector3(0, -180, 0));
+                //    Debug.Log("work2");
+               //}
+               
+            }
+
+            
+            //IMPORTANT - i need to find a way to do this for all variables of the platforms position effieciently
+            platx = Mathf.MoveTowards(transform.position.x, transform.position.x + movementDirection,  Time.deltaTime * movementSpeed);
             platy = Mathf.MoveTowards(transform.position.y, transform.position.y, Time.deltaTime * movementSpeed);
             platz = Mathf.MoveTowards(transform.position.z, transform.position.z, Time.deltaTime * movementSpeed);
             currentpos = new Vector3(platx, platy, platz);
