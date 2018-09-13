@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class MeleeEnemy : MonoBehaviour {
     private GameObject Player;
     BoxCollider2D col;
     public Vector3 currentpos;
+    
 
     private Collider2D frontCheck;
 
@@ -20,9 +22,11 @@ public class MeleeEnemy : MonoBehaviour {
     public static bool Frozen;
     public static bool freezeActive;
     public float freezeDelay;
+    private Func<ContactFilter2D, Collider2D[], int> nullChecker;
 
     // Use this for initialization
     void Start () {
+        Frozen = false;
         col = gameObject.GetComponent<BoxCollider2D>();
         frontCheck = gameObject.transform.GetChild(0).GetComponent<BoxCollider2D>();
         movementDirection = 1;
@@ -33,11 +37,13 @@ public class MeleeEnemy : MonoBehaviour {
 
         if (!Frozen)
         {
-            if (!frontCheck.IsTouching(GetComponentInParent<BoxCollider2D>()))
+            nullChecker = frontCheck.GetComponent<BoxCollider2D>().OverlapCollider;
+            if (nullChecker == null)
             {
                 //if (gameObject.transform.forward == new Vector3(0,1, 0))
                 //{
                 transform.forward = -transform.forward;
+                movementDirection = -movementDirection;
                     Debug.Log("work1");
                 //}
                 //else{
@@ -46,6 +52,7 @@ public class MeleeEnemy : MonoBehaviour {
                //}
                
             }
+            nullChecker = null;
 
             
             //IMPORTANT - i need to find a way to do this for all variables of the platforms position effieciently
