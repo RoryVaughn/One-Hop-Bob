@@ -61,7 +61,7 @@ public class PowerUp : MonoBehaviour {
                     break;
                 case 5:
                     {
-
+                        Player.GetComponent<Playermove>().hasShield = true;
                     }
                     break;
 

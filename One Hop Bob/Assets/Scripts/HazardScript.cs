@@ -25,6 +25,7 @@ public class HazardScript : MonoBehaviour {
             else 
             {
                 c.GetComponent<Playermove>().hasShield = false;
+                c.transform.GetChild(1).gameObject.SetActive(false);
             }
 
         }

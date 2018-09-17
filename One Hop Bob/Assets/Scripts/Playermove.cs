@@ -132,6 +132,10 @@ public class Playermove : MonoBehaviour {
                 fireBall = Instantiate(fireBall, new Vector3(transform.position.x + 2.0f, transform.position.y + 1.0f, transform.position.z), Quaternion.identity);
             }
         }
+        if (hasShield)
+        {
+            transform.GetChild(1).gameObject.SetActive(true);
+        }
 
         /////////////////////////////////////////////////////////////////////////////////
         ////BELOW THIS POINT IS DEBUGGING CODE THAT SHOULD BE CHANGED WHEN BUILDING! ////
