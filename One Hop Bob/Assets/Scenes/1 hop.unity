@@ -500,6 +500,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &40231066
 BoxCollider2D:
@@ -1471,6 +1472,7 @@ MonoBehaviour:
   platx: -3.2512503
   platy: 148
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &242128163
 BoxCollider2D:
@@ -2281,6 +2283,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &403767729
 BoxCollider2D:
@@ -2396,6 +2399,7 @@ GameObject:
   - component: {fileID: 417696044}
   - component: {fileID: 417696045}
   - component: {fileID: 417696046}
+  - component: {fileID: 417696047}
   m_Layer: 0
   m_Name: Front
   m_TagString: Untagged
@@ -2453,6 +2457,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nullCheck: 0
+--- !u!50 &417696047
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417696043}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 2
 --- !u!1 &421777245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1396596834794024, guid: 1826e5bb0fe854c2bac6de32bdbac715,
@@ -3394,6 +3418,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &690883617
 BoxCollider2D:
@@ -4399,6 +4424,7 @@ MonoBehaviour:
   platx: -3.2512503
   platy: 148
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &920306991
 BoxCollider2D:
@@ -4524,6 +4550,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &976766773
 BoxCollider2D:
@@ -4752,6 +4779,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &1023697318
 BoxCollider2D:
@@ -5047,6 +5075,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &1100462098
 BoxCollider2D:
@@ -5924,6 +5953,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &1274047949
 BoxCollider2D:
@@ -6117,6 +6147,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &1331307165
 BoxCollider2D:
@@ -6451,6 +6482,18 @@ Prefab:
         type: 2}
       propertyPath: Movespeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846868528407558, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387056933984020, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4405671134721822, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 2}
@@ -7661,6 +7704,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &1649336770
 BoxCollider2D:
@@ -9217,6 +9261,7 @@ MonoBehaviour:
   platx: 3.9148283
   platy: 172
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &2013570208
 BoxCollider2D:
@@ -9307,6 +9352,7 @@ MonoBehaviour:
   platx: -3.2570443
   platy: 156
   platz: 0
+  platDir: 0
   freezeDelay: 0
 --- !u!61 &2029442100
 BoxCollider2D:

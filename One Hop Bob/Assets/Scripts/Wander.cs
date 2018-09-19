@@ -6,13 +6,15 @@ public class Wander : MonoBehaviour {
 
     public bool nullCheck;
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         nullCheck = true;
+        Debug.Log("in");
     }
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
         nullCheck = false;
+        Debug.Log("out");
     }
 
     // Use this for initialization
