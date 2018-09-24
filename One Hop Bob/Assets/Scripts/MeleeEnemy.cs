@@ -13,6 +13,7 @@ public class MeleeEnemy : MonoBehaviour {
     public Vector3 currentpos;
 
     private GameObject frontCheck;
+    private GameObject parentPlat;
 
 
     public float platx;
@@ -25,16 +26,20 @@ public class MeleeEnemy : MonoBehaviour {
 
    
 
+
+
     // Use this for initialization
     void Start () {
         Frozen = false;
         col = gameObject.GetComponent<BoxCollider2D>();
         frontCheck = transform.GetChild(0).gameObject;
         movementDirection = 2;
+
         movementSpeedO = GetComponentInParent<PlatformMove>().Movespeed;
-        movementSpeed = movementSpeedO;
+        movementSpeed = movementSpeedO * 1.5f;
     }
 	
+
 	// Update is called once per frame
 	void Update () {
         Debug.Log(Frozen);
@@ -50,9 +55,9 @@ public class MeleeEnemy : MonoBehaviour {
                 Debug.Log(frontCheck.GetComponent<Wander>().nullCheck);
 
                 //this code checks the velocity to deturmine how fast the enemy should walk to avoid looking dumb when walking the same direction as the platfrom he is on,
-                if (((GetComponentInParent<PlatformMove>().platDir > 0) && (movementDirection < 0)) || ((GetComponentInParent<PlatformMove>().platDir < 0) && (movementDirection > 0)))
+                if (((GetComponentInParent<PlatformMove>().platDir > 0) && (movementDirection > 0)) || ((GetComponentInParent<PlatformMove>().platDir < 0) && (movementDirection < 0)))
                 {
-                    movementSpeed = movementSpeed * 2;
+                    movementSpeed = movementSpeed * 2.0f;
                 }
                 else
                 {

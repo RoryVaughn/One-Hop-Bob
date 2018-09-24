@@ -2457,6 +2457,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nullCheck: 0
+  firstHit: 0
+  parentPlat: {fileID: 0}
 --- !u!50 &417696047
 Rigidbody2D:
   serializedVersion: 4
@@ -7811,6 +7813,7 @@ GameObject:
   - component: {fileID: 1658063781}
   - component: {fileID: 1658063782}
   - component: {fileID: 1658063783}
+  - component: {fileID: 1658063784}
   m_Layer: 0
   m_Name: Melee
   m_TagString: Untagged
@@ -7829,7 +7832,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 417696044}
-  m_Father: {fileID: 2023244126}
+  m_Father: {fileID: 1776050708}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1658063780
@@ -7890,7 +7893,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08, y: 0}
+  m_Offset: {x: 0.1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7934,6 +7937,26 @@ MonoBehaviour:
   Player: {fileID: 0}
   isProjectile: 0
   power: 0
+--- !u!50 &1658063784
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1658063778}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1658122350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4027496858998208, guid: aeb769850e88d4c8e80711ec3826ec1c,
@@ -9289,11 +9312,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 1}
   m_EdgeRadius: 0
---- !u!4 &2023244126 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4405671134721822, guid: 0f316f3ea25ad4b4fae31718bcd7719d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1393983796}
 --- !u!1 &2029442097
 GameObject:
   m_ObjectHideFlags: 0

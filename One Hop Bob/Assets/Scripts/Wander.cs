@@ -5,10 +5,17 @@ using UnityEngine;
 public class Wander : MonoBehaviour {
 
     public bool nullCheck;
+    public bool firstHit;
+    public GameObject parentPlat;
+
 
     void OnTriggerEnter2D(Collider2D other)
     {
         nullCheck = true;
+        if (firstHit == false)
+        {
+            parentPlat = other.gameObject;
+        }
         Debug.Log("in");
     }
     void OnTriggerExit2D(Collider2D other)
