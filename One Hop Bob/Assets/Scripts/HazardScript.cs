@@ -35,7 +35,7 @@ public class HazardScript : MonoBehaviour {
     {
         ScoreScript.health -= power;
         scoreBoard.GetComponent<ScoreScript>().healthCheck();
-        Debug.Log("work");
+        Debug.Log("health is now " + ScoreScript.health);
     }
 
     // Use this for initialization

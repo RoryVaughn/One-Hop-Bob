@@ -11,17 +11,21 @@ public class Wander : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        nullCheck = true;
-        if (firstHit == false)
+        if (other.gameObject.GetComponent<PlatformMove>())
         {
-            parentPlat = other.gameObject;
+            nullCheck = true;
+
+            Debug.Log("in");
         }
-        Debug.Log("in");
+
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        nullCheck = false;
-        Debug.Log("out");
+        if (other.gameObject.GetComponent<PlatformMove>())
+        {
+            nullCheck = false;
+            Debug.Log("out");
+        }
     }
 
     // Use this for initialization
