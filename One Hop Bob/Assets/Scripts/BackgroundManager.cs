@@ -15,7 +15,7 @@ public class BackgroundManager : MonoBehaviour {
         //Get and store a reference to the collider2D attached to Ground.
         groundCollider = GetComponent<BoxCollider2D>();
         //Store the size of the collider along the y axis (its length in units).
-        groundVerticalLength = 19f;
+        groundVerticalLength = 36f;
         Camera = GameObject.FindWithTag("MainCamera");
     }
 
@@ -23,7 +23,7 @@ public class BackgroundManager : MonoBehaviour {
     private void Update()
     {
         //Check if the difference along the y axis between the main Camera and the position of the object this is attached to is greater than groundHorizontalLength.
-        if (Camera.transform.GetChild(1).transform.position.y > transform.position.y + 9.5f)
+        if (Camera.transform.GetChild(1).transform.position.y > transform.position.y + 17f )
 
         {
             Debug.Log("hello");
@@ -39,6 +39,6 @@ public class BackgroundManager : MonoBehaviour {
         Vector2 groundOffSet = new Vector2(0, groundVerticalLength);
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera above of the player.
-        transform.position = (Vector2)transform.position + new Vector2(groundOffSet.x, groundOffSet.y + 9.5f);
+        transform.position = (Vector2)transform.position + new Vector2(groundOffSet.x, groundOffSet.y);
     }
 }
