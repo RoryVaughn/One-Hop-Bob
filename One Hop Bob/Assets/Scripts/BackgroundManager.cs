@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundManager : MonoBehaviour {
 
-
+    public Sprite Background;
     private BoxCollider2D groundCollider;       //This stores a reference to the collider attached to the Ground.
     private float groundVerticalLength;       //A float to store the y-axis length of the collider2D attached to the Ground GameObject.
     private GameObject Camera;
@@ -40,5 +40,9 @@ public class BackgroundManager : MonoBehaviour {
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera above of the player.
         transform.position = (Vector2)transform.position + new Vector2(groundOffSet.x, groundOffSet.y);
+        if (transform.position.y >= 60.0f)
+        {
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Background;
+        }
     }
 }
