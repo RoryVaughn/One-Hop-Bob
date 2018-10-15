@@ -15,7 +15,7 @@ public class BackgroundManager : MonoBehaviour {
         //Get and store a reference to the collider2D attached to Ground.
         groundCollider = GetComponent<BoxCollider2D>();
         //Store the size of the collider along the y axis (its length in units).
-        groundVerticalLength = 36f;
+        groundVerticalLength = 48f;
         Camera = GameObject.FindWithTag("MainCamera");
     }
 
