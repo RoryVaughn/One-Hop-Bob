@@ -6,7 +6,7 @@ public class BackgroundManager : MonoBehaviour {
 
     public Sprite Background;
     private BoxCollider2D groundCollider;       //This stores a reference to the collider attached to the Ground.
-    private float groundVerticalLength;       //A float to store the y-axis length of the collider2D attached to the Ground GameObject.
+    public float groundVerticalLength;       //A float to store the y-axis length of the collider2D attached to the Ground GameObject.
     private GameObject Camera;
 
     //Awake is called before Start.
@@ -14,8 +14,6 @@ public class BackgroundManager : MonoBehaviour {
     {
         //Get and store a reference to the collider2D attached to Ground.
         groundCollider = GetComponent<BoxCollider2D>();
-        //Store the size of the collider along the y axis (its length in units).
-        groundVerticalLength = 48f;
         Camera = GameObject.FindWithTag("MainCamera");
     }
 
