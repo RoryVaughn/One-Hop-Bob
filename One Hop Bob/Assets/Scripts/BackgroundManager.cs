@@ -8,6 +8,7 @@ public class BackgroundManager : MonoBehaviour {
     private BoxCollider2D groundCollider;       //This stores a reference to the collider attached to the Ground.
     public float groundVerticalLength;       //A float to store the y-axis length of the collider2D attached to the Ground GameObject.
     private GameObject Camera;
+    public float offset = 17f;
 
     //Awake is called before Start.
     private void Awake()
@@ -21,11 +22,12 @@ public class BackgroundManager : MonoBehaviour {
     private void Update()
     {
         //Check if the difference along the y axis between the main Camera and the position of the object this is attached to is greater than groundHorizontalLength.
-        if (Camera.transform.GetChild(1).transform.position.y > transform.position.y + 17f )
+        if (Camera.transform.GetChild(1).transform.position.y > transform.position.y + offset  )
 
         {
             Debug.Log("hello");
             //If true, this means this object is no longer visible and we can safely move it forward to be re-used.
+
             RepositionBackground();
         }
     }
@@ -37,10 +39,11 @@ public class BackgroundManager : MonoBehaviour {
         Vector2 groundOffSet = new Vector2(0, groundVerticalLength);
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera above of the player.
-        transform.position = (Vector2)transform.position + new Vector2(groundOffSet.x, groundOffSet.y);
-        if (transform.position.y >= 60.0f)
+        if (transform.position.y + groundOffSet.y <= 90f)
         {
-            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Background;
+            transform.position = (Vector2)transform.position + new Vector2(groundOffSet.x, groundOffSet.y);
         }
+
+
     }
 }
