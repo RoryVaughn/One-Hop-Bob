@@ -9,6 +9,7 @@ public class BackgroundManager : MonoBehaviour {
     public float groundVerticalLength;       //A float to store the y-axis length of the collider2D attached to the Ground GameObject.
     private GameObject Camera;
     public float offset = 17f;
+    public bool lowerSection;
 
     //Awake is called before Start.
     private void Awake()
@@ -39,7 +40,7 @@ public class BackgroundManager : MonoBehaviour {
         Vector2 groundOffSet = new Vector2(0, groundVerticalLength);
 
         //Move this object from it's position offscreen, behind the player, to the new position off-camera above of the player.
-        if (transform.position.y + groundOffSet.y <= 90f)
+        if ((transform.position.y + groundOffSet.y <= 90f) || lowerSection)
         {
             transform.position = (Vector2)transform.position + new Vector2(groundOffSet.x, groundOffSet.y);
         }
