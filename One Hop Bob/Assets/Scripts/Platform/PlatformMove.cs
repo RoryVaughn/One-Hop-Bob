@@ -14,6 +14,8 @@ public class PlatformMove : MonoBehaviour {
     public float platx;
     public float platy;
     public float platz;
+    public Sprite Image;
+
 
     public float platDir;
 
@@ -33,6 +35,10 @@ public class PlatformMove : MonoBehaviour {
     {
         c.collider.transform.SetParent(null);
     
+    }
+    void Awake()
+    {
+
     }
     // Use this for initialization
     void Start () {
