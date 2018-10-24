@@ -17,9 +17,9 @@ public class FireScript : MonoBehaviour {
         }
     }
 
-    void takedamage()
+    public void takedamage()
     {
-        scoreBoard.GetComponent<ScoreScript>().health--;
+        ScoreScript.health--;
         scoreBoard.GetComponent<ScoreScript>().healthCheck();
         Debug.Log("work");
     }

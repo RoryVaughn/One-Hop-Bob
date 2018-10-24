@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 2447f24e1e051cf458261d00e3c6fe7b
-timeCreated: 1521590607
-licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: UndeadEmpire2DAssets_0
@@ -155,7 +153,7 @@ TextureImporter:
     21300296: UndeadEmpire2DAssets_148
     21300298: UndeadEmpire2DAssets_149
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -173,6 +171,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -183,7 +183,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -195,18 +195,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -216,7 +219,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
+  - serializedVersion: 2
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -226,7 +230,30 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -253,6 +280,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7e646fa4b5223462e8cdb9120949a882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_1
       rect:
@@ -267,6 +300,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a22bbf5a951245b991f5fabce9fc588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_2
       rect:
@@ -281,6 +320,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7f764abf57f5d446a97dbac86cb8c2dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_3
       rect:
@@ -295,6 +340,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ccc0b83fbf33542a5b4100d3e29a485b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_4
       rect:
@@ -309,6 +360,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3e3f1e8727bf497b973ec089a96b88d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_5
       rect:
@@ -323,6 +380,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 887cedf42efea42b6bf9ce899f751f12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_6
       rect:
@@ -337,6 +400,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1eb46c3a6372c4205adaf20317d36983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_7
       rect:
@@ -351,6 +420,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 71680f3d5dac54146b278f800febaaaa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_8
       rect:
@@ -365,6 +440,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f3d4c2f3a2e3c426b9e72a56e9e73c0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_9
       rect:
@@ -379,6 +460,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 3000a2e7fead0427f8b923d5a2275bc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_10
       rect:
@@ -393,6 +480,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 727061bad59964ba19000a0590f12f82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_11
       rect:
@@ -407,6 +500,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f91b1b5d8526a45cb8dcfa51ce75a8f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_12
       rect:
@@ -421,6 +520,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65f3ab80afc4b4e2b9b7bb0a0ff2683c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_13
       rect:
@@ -435,6 +540,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 048015f67d9c2441eacf901d3f3a96e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_14
       rect:
@@ -449,6 +560,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0e503409837e5434ba6238861bfd08b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_15
       rect:
@@ -463,6 +580,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f3535ce65e37b4a3d98889932bf5dfeb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_16
       rect:
@@ -477,6 +600,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69483f4cf8ef84506a338f79733d850a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_17
       rect:
@@ -491,6 +620,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 208b58fd29e4844439622038b94827f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_18
       rect:
@@ -505,6 +640,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 60e35b1af4b404e77bd330e40af921d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_19
       rect:
@@ -519,6 +660,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 9e9f4594798b94da587adca5f26845fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_20
       rect:
@@ -533,6 +680,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 781d66fef35fd43c2a34fd69e708a508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_21
       rect:
@@ -547,6 +700,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23dde6d912ca24edab78195a2e94dedc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_22
       rect:
@@ -561,6 +720,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65e47d5ca528942049bdf003d36e31ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_23
       rect:
@@ -575,6 +740,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0db04805212a0445eba583a31691425b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_24
       rect:
@@ -589,6 +760,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 459969fde209344539a7ebe6e316ee44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_25
       rect:
@@ -603,6 +780,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c200c2a14b0f046678b920eada49ab55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_26
       rect:
@@ -617,6 +800,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5738ca4e1ee24a9ebc67ecc447c39e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_27
       rect:
@@ -631,6 +820,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4de2fbacf0619428d9e95ac85ff11ff4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_28
       rect:
@@ -645,6 +840,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1bd086cd130c84b629b3e8e51005623a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_29
       rect:
@@ -659,6 +860,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ad319bef3ef0d46b3aa07b36113cf9ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_30
       rect:
@@ -673,6 +880,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca7bc395848494297a659a5ce316ff56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_31
       rect:
@@ -687,6 +900,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 956ec145bd4a64ccab723135194b402d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_32
       rect:
@@ -701,6 +920,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b612c605fbe42427497d96b7f99dca7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_33
       rect:
@@ -715,6 +940,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ae2d448cb90a0483fb6c68e5433de857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_34
       rect:
@@ -729,6 +960,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2799d4a6a01dd4207b87a2968819f027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_35
       rect:
@@ -743,6 +980,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a62eb0005add47788e5946a8b313312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_36
       rect:
@@ -757,6 +1000,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 383b8de457dee45b7845627bddfcce4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_37
       rect:
@@ -771,6 +1020,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f43b1ef4ae7dc4257bdc506634b6f652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_38
       rect:
@@ -785,6 +1040,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6facf079dcd2b44a38a3acb6ae84d40c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_39
       rect:
@@ -799,6 +1060,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4c88614ae18ce4a38aabcf37015b88a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_40
       rect:
@@ -813,6 +1080,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87eb2297311294e12b95f00880facdd4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_41
       rect:
@@ -827,6 +1100,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b01d85cbf002c49b2b39733877515e39
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_42
       rect:
@@ -841,6 +1120,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 431e4b36577d74abaa5659e3cefcce9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_43
       rect:
@@ -855,6 +1140,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1f9566ff3580f4fd589426a5d59eef30
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_44
       rect:
@@ -869,6 +1160,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 909d4cbb978dc4f9da9d5bfa4c087d5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_45
       rect:
@@ -883,6 +1180,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 19adba7c55f6049d9ac7cda6bcad0964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_46
       rect:
@@ -897,6 +1200,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d55f49f3118a64d18927b8b4dcd6ccba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_47
       rect:
@@ -911,6 +1220,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: fe5e16004eee54e77b7e89c64d38970c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_48
       rect:
@@ -925,6 +1240,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48260218a59ae4a9d90272dee10a548c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_49
       rect:
@@ -939,6 +1260,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a0461835e43024bceaf30a88fb3bb514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_50
       rect:
@@ -953,6 +1280,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 92a3ff512653949e38755a081e3a680f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_51
       rect:
@@ -967,6 +1300,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 470238635f54543daa389e3e778d8051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_52
       rect:
@@ -981,6 +1320,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b963fe65705ca439fa16b24961ef06f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_53
       rect:
@@ -995,6 +1340,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c59d02ad257c443828f409cc9404bf28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_54
       rect:
@@ -1009,6 +1360,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cf983f82025ac412d960dbde1b046dd1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_55
       rect:
@@ -1023,6 +1380,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d77109e38c2594b32a4c96feef35c118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_56
       rect:
@@ -1037,6 +1400,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8a44e849283c4bb19ded65e8bc26c23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_57
       rect:
@@ -1051,6 +1420,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d5abc7d976595431fae7b36acc4f6c36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_58
       rect:
@@ -1065,6 +1440,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b12fcf31b4ffa413492810e9cbf346ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_59
       rect:
@@ -1079,6 +1460,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: b1d8b46e2eefe45519119183755c8bf7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_60
       rect:
@@ -1093,6 +1480,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: fdd3c1d1ee3454008885f986f134069a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_61
       rect:
@@ -1107,6 +1500,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 081762e1870a04cbfa6cd840df264fc2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_62
       rect:
@@ -1121,6 +1520,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f68beafa0dacc4e68bec8099762eb5b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_63
       rect:
@@ -1135,6 +1540,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25284d58f109747d0be83bcd6410de1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_64
       rect:
@@ -1149,6 +1560,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cd15a6c13fa074e389116c12182d55df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_65
       rect:
@@ -1163,6 +1580,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4b412b371e58494891c890780e17721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_66
       rect:
@@ -1177,6 +1600,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 99c4cb4e065a1494eb8c600efbe7672a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_67
       rect:
@@ -1191,6 +1620,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 75a7797cd50744fabab1c87e72eabc38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_68
       rect:
@@ -1205,6 +1640,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7b20b47ef62b745be8af3b8bf01b47d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_69
       rect:
@@ -1219,6 +1660,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ecdbcc1b668c4452e9a83e243a15d9f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_70
       rect:
@@ -1233,6 +1680,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1acdba0e60d154cca95aaa99c8792e58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_71
       rect:
@@ -1247,6 +1700,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 52df0169f3c8a4cab9c4f6f40380d7b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_72
       rect:
@@ -1261,6 +1720,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: afe39208da365419dba9e9c15b090812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_73
       rect:
@@ -1275,6 +1740,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8230ddcf0cbe44bf3a0c6a3aa06b7ef5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_74
       rect:
@@ -1289,6 +1760,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7561250a63b4c4d479d147c2315b9336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_75
       rect:
@@ -1303,6 +1780,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 351944ac2dc43409bb46cde00cdd2af1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_76
       rect:
@@ -1317,6 +1800,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5d98baac49ca14b2480247a91679f279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_77
       rect:
@@ -1331,6 +1820,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7cc4a357f1e434358a0c3ef5b38433fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_78
       rect:
@@ -1345,6 +1840,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07f6521036ae842e585cfc3ed3666f2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_79
       rect:
@@ -1359,6 +1860,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a516e9823757d46f88e23a5dddbc5ca8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_80
       rect:
@@ -1373,6 +1880,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5af939ca4506a4263bb3ee25f7d36368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_81
       rect:
@@ -1387,6 +1900,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d0c70518f2ddc4b43a5d3ffd9aac17fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_82
       rect:
@@ -1401,6 +1920,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c519e1281503c46558cc8f8579914b92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_83
       rect:
@@ -1415,6 +1940,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5be98a055ceaa4c0c84c7ee16135ddcc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_84
       rect:
@@ -1429,6 +1960,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84f01bf950c8040df9721e23bc7cc15a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_85
       rect:
@@ -1443,6 +1980,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2aa30dc1269e64dd6b179c226000a4a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_86
       rect:
@@ -1457,6 +2000,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e321522a58fab4ad9929e68a714d208f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_87
       rect:
@@ -1471,6 +2020,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a62ac54b74a5e43f4a0ab3d20b186fbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_88
       rect:
@@ -1485,6 +2040,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb236967152be4b659eb1fe218eca59b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_89
       rect:
@@ -1499,6 +2060,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c79e6423631ee408b8a50af9a1dd0f14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_90
       rect:
@@ -1513,6 +2080,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47098b892380c4277b83f733c7b02063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_91
       rect:
@@ -1527,6 +2100,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8ae306d6e1a3d4d95979e5c2a350b212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_92
       rect:
@@ -1541,6 +2120,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d4ec1bd52e5044e1781b99f36e44ba46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_93
       rect:
@@ -1555,6 +2140,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 627758ca650c84d9b86e364c00171f6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_94
       rect:
@@ -1569,6 +2160,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0fbaa79e86498407a8bdb338dcbb9e1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_95
       rect:
@@ -1583,6 +2180,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28c368f5ca3fb4b8da35c172cd24ed49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_96
       rect:
@@ -1597,6 +2200,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 591b75cc0a78c40a6aa7cd94aa34f5e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_97
       rect:
@@ -1611,6 +2220,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 16b2006736a77458ababc9508fbc7ca4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_98
       rect:
@@ -1625,6 +2240,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0068b5035cbdc450bb669268c053d21a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_99
       rect:
@@ -1639,6 +2260,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 7925dd709b0664e36b97d43ba1e49df8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_100
       rect:
@@ -1653,6 +2280,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04cfa9b3551344eccbcd6e361cd31e2f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_101
       rect:
@@ -1667,6 +2300,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 769ad1e082f3a4de7a288ea35a8ee6c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_102
       rect:
@@ -1681,6 +2320,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7935fc19de2f46c8acf550af551e11d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_103
       rect:
@@ -1695,6 +2340,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42310b5a34731439a846541c204c97b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_104
       rect:
@@ -1709,6 +2360,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: dc3f982c014654cb6b10fc848f74519c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_105
       rect:
@@ -1723,6 +2380,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 1e91d334b43bf40b78c303afc7e541d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_106
       rect:
@@ -1737,6 +2400,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6fd9c57ad1c141e2bbdb5dffb9b6688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_107
       rect:
@@ -1751,6 +2420,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6d6a07b3956e04a3ba54839982041e89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_108
       rect:
@@ -1765,6 +2440,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: f5755ca933f0c4e078c7d0d47db2e68d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_109
       rect:
@@ -1779,6 +2460,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: de7efc348b307409a997a7da21d4b032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_110
       rect:
@@ -1793,6 +2480,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 13b6aa5e038f04950af82864124bf7da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_111
       rect:
@@ -1807,6 +2500,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a647a3885335445188633f1b1136bbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_112
       rect:
@@ -1821,6 +2520,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 50d7363da49ef4e078b999a534ac79b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_113
       rect:
@@ -1835,6 +2540,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 73048940f257d4c26bc5056d596be1cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_114
       rect:
@@ -1849,6 +2560,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 3064f1502a0cc4a5f8451999e8d41ca3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_115
       rect:
@@ -1863,6 +2580,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc18845d1f163402bb06d7b87a763458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_116
       rect:
@@ -1877,6 +2600,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6312dfc25bad4250bcd569d2fb7ff72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_117
       rect:
@@ -1891,6 +2620,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8fe4e5959c9fb420bbed006880a75339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_118
       rect:
@@ -1905,6 +2640,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5491f941fe88940859b040239e1bc530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_119
       rect:
@@ -1919,6 +2660,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6bfb0d468e1b1445e94065ebfe84e1db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_120
       rect:
@@ -1933,6 +2680,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2f1f5a105f40d489a9e96a1effcb66c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_121
       rect:
@@ -1947,6 +2700,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8658d0e2ccead4367a60f3de553836e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_122
       rect:
@@ -1961,6 +2720,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 161382f7ae308440ba56547c87490126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_123
       rect:
@@ -1975,6 +2740,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: dcf6ccc9488c94634ae64d8d4453545f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_124
       rect:
@@ -1989,6 +2760,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 9a2f8cff49eae4a2e95e213f37226634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_125
       rect:
@@ -2003,6 +2780,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 434a1fd39a21d4940a863fb682fa92d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_126
       rect:
@@ -2017,6 +2800,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8d63ccbb656b84d4dad2649e8cd9d003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_127
       rect:
@@ -2031,6 +2820,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c1ae23457db7d4c3aaa0264fca55996f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_128
       rect:
@@ -2045,6 +2840,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4177a23782c0c4741963d7e79fe5eeff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_129
       rect:
@@ -2059,6 +2860,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 798820d14f1ef42fc8a19f2556b0869e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_130
       rect:
@@ -2073,6 +2880,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c563ef2a1c9a1443db0bf979dc4d44da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_131
       rect:
@@ -2087,6 +2900,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 19b6f3746b60f47e3ac17fed4fff648d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_132
       rect:
@@ -2101,6 +2920,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2d36b9bbfe8164ad9868f7038bef291b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_133
       rect:
@@ -2115,6 +2940,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05809e90728444daf8d10d5de2d10dc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_134
       rect:
@@ -2129,6 +2960,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8ab6b6cefc0848a7ac444673ef27363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_135
       rect:
@@ -2143,6 +2980,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0cd782b169d5a405c98d0983af6e706a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_136
       rect:
@@ -2157,6 +3000,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d2689c24cc2c84fc6ba87d22895b0ace
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_137
       rect:
@@ -2171,6 +3020,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: dede89dd20b804ec3819a08f2e66b88f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_138
       rect:
@@ -2185,6 +3040,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ad8b9b10fb01b48bd8c224d1e450562c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_139
       rect:
@@ -2199,6 +3060,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 591553d05b5ae4ab4a26b1829aa87347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_140
       rect:
@@ -2213,6 +3080,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b8a398ef649d4f51b624f8bc3c6e092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_141
       rect:
@@ -2227,6 +3100,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: dce94ecf7abec40b0bfb9f93968f194e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_142
       rect:
@@ -2241,6 +3120,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0fc4c2abcef544212b34cfe752860751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_143
       rect:
@@ -2255,6 +3140,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: d0e857b005ee640d2ae22192d83495e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_144
       rect:
@@ -2269,6 +3160,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08fd9c08f8dd64af097a8441bdb1a801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_145
       rect:
@@ -2283,6 +3180,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 204019326893f474798f1f02301d3d4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_146
       rect:
@@ -2297,6 +3200,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 5c69e88adf0a64dde8c9c65251eb18cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_147
       rect:
@@ -2311,6 +3220,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 3202b341ee0694522b48a90d93e714c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_148
       rect:
@@ -2325,6 +3240,12 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8357ace47f7fe44ec87d9b2bae7479dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: UndeadEmpire2DAssets_149
       rect:
@@ -2339,9 +3260,23 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cf0f56ac68dc247e49751ad82a6dbe5e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
