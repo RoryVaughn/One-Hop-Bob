@@ -18,10 +18,7 @@ public class FlyingEnemy1 : MonoBehaviour {
     [SerializeField]
     private float MoveSpeed = 1;
 
-
-
-
-
+   
     void OnTriggerEnter2D(Collision2D c)
     {
         if (c.gameObject == Player)
