@@ -15,6 +15,8 @@ public class Playermove : MonoBehaviour {
     public List<Collider2D> groundtouched = new List<Collider2D>();
     public List <GameObject> Achieved = new List<GameObject>();
     float hMove;
+    public GameObject Flag;
+
 
     //PowerUpstuff
     public bool boostActive;
@@ -48,6 +50,11 @@ public class Playermove : MonoBehaviour {
                 groundtouched.Add(c.collider);
                 if (!Achieved.Contains(c.gameObject))
                 {
+                    // PLaces the flag where the player landed on the platform
+                    Vector3 newFlagSpot = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.position.z);
+                    Instantiate(Flag, newFlagSpot, c.gameObject.transform.rotation,c.gameObject.transform);
+
+                    //adds platform to the list
                     Achieved.Add(c.gameObject);
                     ScoreScript.scoreValue++;
 

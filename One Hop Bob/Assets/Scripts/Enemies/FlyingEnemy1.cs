@@ -81,7 +81,7 @@ public class FlyingEnemy1 : MonoBehaviour {
                 {
                     Launch = true;
                     target = 2;
-                    MoveSpeed = 5f;
+                    MoveSpeed = 7f;
                 }
                 if (Timer >= 10f)
                 {
