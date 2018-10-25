@@ -16,6 +16,8 @@ public class Playermove : MonoBehaviour {
     public List <GameObject> Achieved = new List<GameObject>();
     float hMove;
     public GameObject Flag;
+    private Animator anim;
+    private float VerticalVelocity;
 
 
     //PowerUpstuff
@@ -75,6 +77,9 @@ public class Playermove : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        anim = GetComponent<Animator>();
+        anim.SetBool("Grounded", grounded);
+        anim.SetFloat("Velocity", VerticalVelocity);
         boostSpeed = 1;
         Respawn = transform.position;
         rb = GetComponent<Rigidbody2D>();
@@ -110,6 +115,7 @@ public class Playermove : MonoBehaviour {
         {
             rb.velocity += (Vector2.up * Physics2D.gravity.y * (highJumpPower - 1) * Time.deltaTime);
         }
+        VerticalVelocity = rb.velocity.y;
         //Jump Input
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
         {
