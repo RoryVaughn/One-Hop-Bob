@@ -21,6 +21,7 @@ public class Playermove : MonoBehaviour {
     private float HorizontalVelocity;
     private bool newFlag;
     private bool facingRight;
+    private bool stopped;
 
 
     //PowerUpstuff
@@ -116,6 +117,7 @@ public class Playermove : MonoBehaviour {
     void Start() {
         anim = GetComponentInChildren<Animator>();
         anim.SetBool("Grounded", grounded);
+        anim.SetBool("Stopped", stopped);
         anim.SetFloat("VerticalVelocity", VerticalVelocity);
         anim.SetFloat("HorizontalVelocity", hMove);
         boostSpeed = 1;
@@ -134,8 +136,17 @@ public class Playermove : MonoBehaviour {
         
         //Horzontal walking input
         hMove = Input.GetAxis("Horizontal");
-        anim.SetFloat("HorizontalVelocity", hMove);
-        
+
+        anim.SetFloat("HorizontalVelocity", Mathf.Abs(hMove));
+        if (hMove == 0)
+            {
+            stopped = true;
+        }
+        else
+        {
+            stopped = false;
+        }
+        anim.SetBool("Stopped", stopped);
 
 
         //this is the current method of movement
