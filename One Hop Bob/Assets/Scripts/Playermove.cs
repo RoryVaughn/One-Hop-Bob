@@ -18,6 +18,9 @@ public class Playermove : MonoBehaviour {
     public GameObject Flag;
     private Animator anim;
     private float VerticalVelocity;
+    private float HorizontalVelocity;
+    private bool newFlag;
+    private bool facingRight;
 
 
     //PowerUpstuff
@@ -48,14 +51,25 @@ public class Playermove : MonoBehaviour {
         {
             if (points[i].normal == Vector2.up && !groundtouched.Contains(c.collider))
             {
+                
                 lastTouched = c.gameObject;
                 groundtouched.Add(c.collider);
                 if (!Achieved.Contains(c.gameObject))
                 {
                     // PLaces the flag where the player landed on the platform
-                    Vector3 newFlagSpot = new Vector3(transform.position.x + 0.3f, transform.position.y, transform.position.z);
+                    float flagSide;
+                    if (facingRight == true)
+                    {
+                        flagSide = 0.5f;
+                    }
+                    else
+                    {
+                        flagSide = -0.3f;
+                    }
+                    Vector3 newFlagSpot = new Vector3(transform.position.x + flagSide, transform.position.y, transform.position.z);
                     Instantiate(Flag, newFlagSpot, c.gameObject.transform.rotation,c.gameObject.transform);
-
+                    newFlag = true;
+                    anim.SetBool("newFlag", newFlag);
                     //adds platform to the list
                     Achieved.Add(c.gameObject);
                     ScoreScript.scoreValue++;
@@ -65,25 +79,50 @@ public class Playermove : MonoBehaviour {
             } 
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        newFlag = false;
+        anim.SetBool("newFlag", newFlag);
+    }
     void OnCollisionExit2D(Collision2D c)
     {
         //deletes the touched object as the player exits the collision to avoid double jumps
         if (groundtouched.Contains(c.collider))
         {
             groundtouched.Remove(c.collider);
+            newFlag = false;
+            anim.SetBool("newFlag", newFlag);
+            anim.SetBool("Grounded", grounded);
+        }
+    }
+    // Flip function
+    private void Flip(float h)
+    {
+        if (h > 0 && !facingRight || h < 0 && facingRight)
+            {
+            facingRight = !facingRight;
+            Vector3 theScale = transform.localScale;
+
+
+             theScale.x *= -1;
+
+            transform.localScale = theScale;
         }
     }
 
 
+
     // Use this for initialization
     void Start() {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         anim.SetBool("Grounded", grounded);
-        anim.SetFloat("Velocity", VerticalVelocity);
+        anim.SetFloat("VerticalVelocity", VerticalVelocity);
+        anim.SetFloat("HorizontalVelocity", hMove);
         boostSpeed = 1;
         Respawn = transform.position;
         rb = GetComponent<Rigidbody2D>();
         fireBall = Resources.Load<GameObject>("FireBall");
+        facingRight = true;
 
 
 
@@ -92,19 +131,24 @@ public class Playermove : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        
         //Horzontal walking input
         hMove = Input.GetAxis("Horizontal");
+        anim.SetFloat("HorizontalVelocity", hMove);
+        
+
 
         //this is the current method of movement
         transform.position += new Vector3(hMove,0,0) * boostSpeed * walkspeed * Time.deltaTime;
-
+        Flip(hMove);
         //The following check is to make the player unable to jump twice without grounding first
         if (groundtouched.Count != 0)
         {
             grounded = true;
+            anim.SetBool("Grounded", grounded);
         }
         else grounded = false;
-
+        anim.SetBool("Grounded", grounded);
         //This allows the player to achievea higher jump by holding the jump button for longer.
 
         if (rb.velocity.y < 0)
@@ -116,12 +160,15 @@ public class Playermove : MonoBehaviour {
             rb.velocity += (Vector2.up * Physics2D.gravity.y * (highJumpPower - 1) * Time.deltaTime);
         }
         VerticalVelocity = rb.velocity.y;
+        anim.SetFloat("VerticalVelocity", VerticalVelocity);
         //Jump Input
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
         {
             rb.AddForce(Vector2.up * highJumpPower, ForceMode2D.Impulse);
         }
 
+
+        
         //////////////////////////////////////////////////
         //// BELOW THIS POINT IS POWER UP INFORMATION ////
         //////////////////////////////////////////////////
