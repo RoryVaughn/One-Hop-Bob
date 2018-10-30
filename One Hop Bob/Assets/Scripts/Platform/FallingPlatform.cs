@@ -25,6 +25,8 @@ public class FallingPlatform : MonoBehaviour {
     private float drop;
     public static bool shakeActive;
     public float shakeDelay;
+    public Transform[] shakePoints;
+    public int shakeTarget;
 
     public static bool Frozen;
     public static bool freezeActive;
@@ -74,18 +76,22 @@ public class FallingPlatform : MonoBehaviour {
                 {
                     platDir = 1;
                 }
-
-            if (shakeDelay >= 5.0f)
+            if (shakeDelay >= 10.0f)
             {
-                //shakeActive = false;
-                //drop = 0;
-                //Movespeed = 10;
+                Destroy(gameObject.transform.parent.gameObject);
+            }
+                if (shakeDelay >= 5.0f)
+            {
+                platx = Mathf.MoveTowards(platform.transform.position.x, platform.transform.position.x, Time.deltaTime * Movespeed);
+                drop = 0;
+                Movespeed = 10;
 
             }
+            platy = Mathf.MoveTowards(platform.transform.position.y, points[target].position.y, Time.deltaTime * Movespeed);
             if (shakeActive)
             {
                 Shake = true;
-                bounce = 1;
+                bounce = 2;
                 shakeDelay += Time.fixedDeltaTime;
             }
             else
@@ -93,23 +99,15 @@ public class FallingPlatform : MonoBehaviour {
                 Shake = false;
                 shakeDelay = 0;
             }
+            if (Shake)
+            {
+                platy = Mathf.MoveTowards(platform.transform.position.y, drop * shakePoints[shakeTarget].position.y, Time.deltaTime * Movespeed);
 
-            platy = Mathf.MoveTowards(platform.transform.position.y, drop * points[target].position.y + bounce, Time.deltaTime * Movespeed);
-                if (Shake)
-                {
-                    if (platform.transform.position.y >= points[target].position.y)
-                    {
-                        bounce = -1;
-                    }
-                    else
-                    {
-                        bounce = 1;
-                    }
-                }
+            }
 
-                
-                
-                platz = Mathf.MoveTowards(platform.transform.position.z, points[target].position.z, Time.deltaTime * Movespeed);
+           
+
+            platz = Mathf.MoveTowards(platform.transform.position.z, points[target].position.z, Time.deltaTime * Movespeed);
 
             
             currentpos = new Vector3(platx, platy, platz);
@@ -117,7 +115,16 @@ public class FallingPlatform : MonoBehaviour {
 
         platform.transform.position = currentpos;
 
-        if (platform.transform.position == points[target].position)
+
+        if (platform.transform.position.y == shakePoints[shakeTarget].position.y)
+        {
+            shakeTarget++;
+            if (shakeTarget >= shakePoints.Length)
+            {
+                shakeTarget = 0;
+            }
+        }
+        if (platform.transform.position.x == points[target].position.x)
         {
             target++;
             if (target >= points.Length)
