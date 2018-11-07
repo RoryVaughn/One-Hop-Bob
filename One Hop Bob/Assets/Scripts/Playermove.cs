@@ -22,6 +22,8 @@ public class Playermove : MonoBehaviour {
     private bool newFlag;
     private bool facingRight;
     private bool stopped;
+    public AudioSource flagSound;
+    public AudioSource jumpSound;
 
 
     //PowerUpstuff
@@ -33,6 +35,7 @@ public class Playermove : MonoBehaviour {
     GameObject fireBall;
     public bool hasArrow;
     public bool hasShield;
+    public AudioSource shieldSound;
 
     //DebugStuff
     public bool testingRespawnMode;
@@ -57,6 +60,7 @@ public class Playermove : MonoBehaviour {
                 groundtouched.Add(c.collider);
                 if (!Achieved.Contains(c.gameObject))
                 {
+                    flagSound.Play();
                     // PLaces the flag where the player landed on the platform
                     float flagSide;
                     if (facingRight == true)
@@ -90,6 +94,7 @@ public class Playermove : MonoBehaviour {
         //deletes the touched object as the player exits the collision to avoid double jumps
         if (groundtouched.Contains(c.collider))
         {
+            jumpSound.Play();
             groundtouched.Remove(c.collider);
             newFlag = false;
             anim.SetBool("newFlag", newFlag);

@@ -15,6 +15,8 @@ public class FlyingEnemy1 : MonoBehaviour {
     public float platy;
     public float platz;
     public float Timer;
+    public AudioSource BirdEnter;
+    public AudioSource BirdAttack;
 
 
     private GameObject Parent;

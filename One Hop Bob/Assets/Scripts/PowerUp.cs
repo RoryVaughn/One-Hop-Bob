@@ -21,7 +21,7 @@ public class PowerUp : MonoBehaviour {
     public float Delay;
     public GameObject Owner;
     public int powerNum;
-
+    public AudioSource powerSound;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,9 +29,10 @@ public class PowerUp : MonoBehaviour {
         if (collision.gameObject.name == "1HopBob")
         {
             Owner = collision.gameObject;
-
+            powerSound.Play();
             switch (powerNum)
             {
+
                 case 0:
                     {
                         ScoreScript.health++;
