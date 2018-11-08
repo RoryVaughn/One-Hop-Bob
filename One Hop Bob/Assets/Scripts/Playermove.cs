@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Playermove : MonoBehaviour {
 
@@ -24,6 +25,7 @@ public class Playermove : MonoBehaviour {
     private bool stopped;
     public AudioSource flagSound;
     public AudioSource jumpSound;
+    
 
 
     //PowerUpstuff
@@ -88,6 +90,7 @@ public class Playermove : MonoBehaviour {
     {
         newFlag = false;
         anim.SetBool("newFlag", newFlag);
+        grounded = true;
     }
     void OnCollisionExit2D(Collision2D c)
     {
@@ -144,7 +147,7 @@ public class Playermove : MonoBehaviour {
 
         anim.SetFloat("HorizontalVelocity", Mathf.Abs(hMove));
         if (hMove == 0)
-            {
+        {
             stopped = true;
         }
         else
@@ -182,9 +185,19 @@ public class Playermove : MonoBehaviour {
         {
             rb.AddForce(Vector2.up * highJumpPower, ForceMode2D.Impulse);
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+
+            SceneManager.LoadScene(1);
+            ScoreScript.scoreValue = -1;
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Application.Quit();
+        }
 
 
-        
+
         //////////////////////////////////////////////////
         //// BELOW THIS POINT IS POWER UP INFORMATION ////
         //////////////////////////////////////////////////

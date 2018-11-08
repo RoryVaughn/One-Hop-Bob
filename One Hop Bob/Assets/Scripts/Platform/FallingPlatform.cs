@@ -56,6 +56,10 @@ public class FallingPlatform : MonoBehaviour {
         platDir = 1;
         bounce = 0;
         drop = 1;
+        shakeDelay = 0;
+        Shake = false;
+        shakeActive = false;
+
         
     }
 
