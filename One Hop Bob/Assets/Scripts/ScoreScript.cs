@@ -53,6 +53,7 @@ public class ScoreScript : MonoBehaviour {
         healthCheck();
 
 	}
+    
 	
 	// Update is called once per frame
 	void Update () {
