@@ -15,6 +15,9 @@ public class FlyingEnemy1 : MonoBehaviour {
     public float platy;
     public float platz;
     public float Timer;
+    public AudioSource BirdEnter;
+    public AudioSource BirdAttack;
+    public int attackInt;
 
 
     private GameObject Parent;
@@ -77,9 +80,14 @@ public class FlyingEnemy1 : MonoBehaviour {
                 {
                     Lock = true;
                 }
+                if (attackInt == 1)
+                {
+                    BirdAttack.Play();
+                }
                 if (Timer >= 4.5f)
                 {
                     Launch = true;
+                    attackInt++;
                     target = 2;
                     MoveSpeed = 7f;
                 }
@@ -104,10 +112,13 @@ public class FlyingEnemy1 : MonoBehaviour {
                 if (target == 1)
                 {
                     floatMode = true;
+                    BirdEnter.Play();
                 }
                 else
                 {
+
                     floatMode = false;
+                    
                 }
                 if (target >= points.Length)
                 {

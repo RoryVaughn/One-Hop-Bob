@@ -11,6 +11,7 @@ public class HazardScript : MonoBehaviour {
     private float moveSpeed;
     private float newX;
     private float newY;
+    public AudioSource hitSound;
 
     public int power;
 
@@ -18,6 +19,7 @@ public class HazardScript : MonoBehaviour {
     {
         if (c.gameObject == Player)
         {
+            hitSound.Play();
             if (!c.GetComponent<Playermove>().hasShield)
             {
                 takedamage();
