@@ -33,6 +33,8 @@ public class Playermove : MonoBehaviour {
     private float boostSpeed;
     public float boostDelay;
 
+    public int jumpLeft;
+    public bool doubleJump;
     public bool hasFireball;
     GameObject fireBall;
     public bool hasArrow;
@@ -53,8 +55,14 @@ public class Playermove : MonoBehaviour {
         //this allows the player to jump
         ContactPoint2D[] points = new ContactPoint2D[2];
         c.GetContacts(points);
+        if (doubleJump)
+        {
+            jumpLeft = 2;
+        }
+
         for (int i = 0; i < points.Length; i++)
         {
+
             if (points[i].normal == Vector2.up && !groundtouched.Contains(c.collider))
             {
                 
@@ -182,9 +190,11 @@ public class Playermove : MonoBehaviour {
         VerticalVelocity = rb.velocity.y;
         anim.SetFloat("VerticalVelocity", VerticalVelocity);
         //Jump Input
-        if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
+        if ((Input.GetKeyDown(KeyCode.Space) && grounded == true) || (Input.GetKeyDown(KeyCode.Space) && jumpLeft > 0))
         {
+            rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * highJumpPower, ForceMode2D.Impulse);
+            jumpLeft--;
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
