@@ -39,6 +39,8 @@ public class SettingsMenu : MonoBehaviour {
         resolutionDropdown.AddOptions(choices);
         resolutionDropdown.value = currentRes;
         resolutionDropdown.RefreshShownValue();
+
+
     }
 
     public void PlayGame()
