@@ -12,6 +12,7 @@ public class HazardScript : MonoBehaviour {
     private float newX;
     private float newY;
     public AudioSource hitSound;
+    public bool winTrigger;
 
     public int power;
 
@@ -20,6 +21,10 @@ public class HazardScript : MonoBehaviour {
         if (c.gameObject == Player)
         {
             hitSound.Play();
+            if (winTrigger)
+            {
+                scoreBoard.GetComponent<PauseMenu>().LevelComplete();
+            }
             if (!c.GetComponent<Playermove>().hasShield)
             {
                 takedamage();
@@ -51,6 +56,7 @@ public class HazardScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
         if (isProjectile)
         {
             newX = Mathf.MoveTowards(transform.position.x, transform.position.x + 1.0f, Time.deltaTime * moveSpeed);

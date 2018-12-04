@@ -4154,7 +4154,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1990390667}
-        m_MethodName: PlayGame
+        m_MethodName: gotoLevelSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4557,6 +4557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 6cd8f434469c8fd4ca35ba67e7fc4ce3, type: 2}
   resolutionDropdown: {fileID: 1854890702}
+  noSettings: 0
 --- !u!1 &2003850135
 GameObject:
   m_ObjectHideFlags: 0

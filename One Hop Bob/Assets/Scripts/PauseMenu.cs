@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour {
     public static bool IsPaused = false;
     public GameObject PauseMenuUI;
     public GameObject SettingsMenuUI;
+    public GameObject PurpleText;
 
     public void Resume()
     {
@@ -35,6 +36,12 @@ public class PauseMenu : MonoBehaviour {
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void LevelComplete()
+    {
+        PurpleText.SetActive(true);
+        Time.timeScale = 0.4f;
     }
 
     // Update is called once per frame
