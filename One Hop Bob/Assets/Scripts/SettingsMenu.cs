@@ -62,6 +62,10 @@ public class SettingsMenu : MonoBehaviour {
         SceneManager.LoadScene("Level Select");
     }
 
+    public void levelComplete()
+    {
+        Debug.Log("Level Complete!!!");
+    }
    
 
     public void levelSelectBack()
