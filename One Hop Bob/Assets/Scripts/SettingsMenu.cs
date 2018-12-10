@@ -57,6 +57,11 @@ public class SettingsMenu : MonoBehaviour {
         SceneManager.LoadScene("1 hop");
     }
 
+    public void level2()
+    {
+        SceneManager.LoadScene("1 hop 2");
+    }
+
     public void gotoLevelSelect()
     {
         SceneManager.LoadScene("Level Select");
