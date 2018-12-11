@@ -20,7 +20,7 @@ public class FallingPlatform : MonoBehaviour {
 
     public float platDir;
 
-    public static bool Shake;
+    private static bool Shake;
     private float bounce;
     private float drop;
     public static bool shakeActive;
@@ -52,7 +52,7 @@ public class FallingPlatform : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        bool touched = false;
+
         platDir = 1;
         bounce = 0;
         drop = 1;
