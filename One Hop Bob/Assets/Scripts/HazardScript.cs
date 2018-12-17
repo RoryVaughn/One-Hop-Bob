@@ -34,7 +34,6 @@ public class HazardScript : MonoBehaviour {
                 c.GetComponent<Playermove>().hasShield = false;
                 c.transform.GetChild(1).gameObject.SetActive(false);
             }
-
         }
     }
 
@@ -42,6 +41,9 @@ public class HazardScript : MonoBehaviour {
     {
         ScoreScript.health -= power;
         scoreBoard.GetComponent<ScoreScript>().healthCheck();
+        Vector2 savedVelocity = Player.GetComponent<Playermove>().rb.velocity;
+        Player.GetComponent<Playermove>().rb.velocity = new Vector2(0, 0);
+        Player.GetComponent<Playermove>().rb.AddForce(savedVelocity * -2,ForceMode2D.Impulse);
         Debug.Log("health is now " + ScoreScript.health);
     }
 
@@ -56,7 +58,6 @@ public class HazardScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         if (isProjectile)
         {
             newX = Mathf.MoveTowards(transform.position.x, transform.position.x + 1.0f, Time.deltaTime * moveSpeed);

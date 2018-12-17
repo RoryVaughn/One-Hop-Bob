@@ -65,10 +65,9 @@ public class Playermove : MonoBehaviour {
 
             if (points[i].normal == Vector2.up && !groundtouched.Contains(c.collider))
             {
-                
                 lastTouched = c.gameObject;
                 groundtouched.Add(c.collider);
-                if (!Achieved.Contains(c.gameObject))
+                if (!Achieved.Contains(c.gameObject) && !c.collider.GetComponent<HazardScript>())
                 {
                     flagSound.Play();
                     // PLaces the flag where the player landed on the platform
