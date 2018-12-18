@@ -41,7 +41,7 @@ public class HazardScript : MonoBehaviour {
     {
         ScoreScript.health -= power;
         scoreBoard.GetComponent<ScoreScript>().healthCheck();
-        Vector2 savedVelocity = Player.GetComponent<Playermove>().rb.velocity;
+        Vector2 savedVelocity = Player.GetComponent<Playermove>().rb.velocity * new Vector2(3,1);
         Player.GetComponent<Playermove>().rb.velocity = new Vector2(0, 0);
         Player.GetComponent<Playermove>().rb.AddForce(savedVelocity * -2,ForceMode2D.Impulse);
         Debug.Log("health is now " + ScoreScript.health);
