@@ -23,6 +23,8 @@ public class Playermove : MonoBehaviour {
     private bool newFlag;
     private bool facingRight;
     private bool stopped;
+    private float time;
+
     public AudioSource flagSound;
     public AudioSource jumpSound;
     
@@ -33,6 +35,9 @@ public class Playermove : MonoBehaviour {
     private float boostSpeed;
     public float boostDelay;
 
+    public bool Invincibility;
+    public float IDelay;
+    public int ICounter;
     public int jumpLeft;
     public bool doubleJump;
     public bool hasFireball;
@@ -111,6 +116,14 @@ public class Playermove : MonoBehaviour {
             anim.SetBool("Grounded", grounded);
         }
     }
+
+    IEnumerator WaitSeconds(float x)
+    {
+
+        yield return new WaitForSeconds(x);
+
+    }
+
     // Flip function
     private void Flip(float h)
     {
@@ -206,8 +219,35 @@ public class Playermove : MonoBehaviour {
             Application.Quit();
         }
 
+        time += Time.deltaTime;
+
+       
+
+        if (Invincibility)
+        {
+            IDelay += Time.fixedDeltaTime;
+            ICounter++;
+
+            if (IDelay >= 3.0f)
+            {
+                Invincibility = false;
+
+            }
+            else
+            {
+                ICounter = 0;
+                IDelay = 0;
+            }
+
+            gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
+            Debug.Log("off");
+            gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            Debug.Log("on");
+
+        }
 
 
+           
         //////////////////////////////////////////////////
         //// BELOW THIS POINT IS POWER UP INFORMATION ////
         //////////////////////////////////////////////////
