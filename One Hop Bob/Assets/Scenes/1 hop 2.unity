@@ -2894,6 +2894,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 1706749768966918, guid: c882e3ddb6f6d59458733bbb6350bba1, type: 2}
+      propertyPath: m_Name
+      value: fallplat2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c882e3ddb6f6d59458733bbb6350bba1, type: 2}
   m_IsPrefabAsset: 0
@@ -9264,6 +9268,7 @@ MonoBehaviour:
   boostDelay: 0
   Invincibility: 0
   IDelay: 0
+  ICounter: 0
   jumpLeft: 0
   doubleJump: 0
   hasFireball: 0
