@@ -43,7 +43,7 @@ public class HazardScript : MonoBehaviour {
             c.gameObject.GetComponent<Playermove>().rb.velocity = new Vector2(0, 0);
             c.gameObject.GetComponent<Playermove>().rb.AddForceAtPosition(savedVelocity * -2.5f, c.transform.position, ForceMode2D.Impulse);
             c.gameObject.GetComponent<Playermove>().rb.AddForceAtPosition(Normalized * 3, c.transform.position, ForceMode2D.Impulse);
-            //c.gameObject.GetComponent<Playermove>().Invincibility = true;
+
 
 
             if (!c.gameObject.GetComponent<Playermove>().Invincibility)
@@ -72,6 +72,11 @@ public class HazardScript : MonoBehaviour {
     {
         ScoreScript.health -= power;
         scoreBoard.GetComponent<ScoreScript>().healthCheck();
+        if (ScoreScript.health > 0)
+        {
+            Player.GetComponent<Playermove>().Invincibility = true;
+        }
+
         
 
     }

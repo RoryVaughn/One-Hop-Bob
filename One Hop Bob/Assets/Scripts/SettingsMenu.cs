@@ -64,6 +64,7 @@ public class SettingsMenu : MonoBehaviour {
 
     public void gotoLevelSelect()
     {
+        Time.timeScale = (1.0f);
         SceneManager.LoadScene("Level Select");
     }
 

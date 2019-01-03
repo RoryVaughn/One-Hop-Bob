@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Playermove : MonoBehaviour {
+
+public class Playermove : MonoBehaviour
+{
 
     public GameObject Player;
     private Vector3 Respawn;
@@ -14,7 +16,7 @@ public class Playermove : MonoBehaviour {
     public bool grounded;
     public GameObject lastTouched;
     public List<Collider2D> groundtouched = new List<Collider2D>();
-    public List <GameObject> Achieved = new List<GameObject>();
+    public List<GameObject> Achieved = new List<GameObject>();
     float hMove;
     public GameObject Flag;
     private Animator anim;
@@ -24,10 +26,11 @@ public class Playermove : MonoBehaviour {
     private bool facingRight;
     private bool stopped;
     private float time;
+    public bool Controls;
 
     public AudioSource flagSound;
     public AudioSource jumpSound;
-    
+
 
 
     //PowerUpstuff
@@ -86,7 +89,7 @@ public class Playermove : MonoBehaviour {
                         flagSide = -0.3f;
                     }
                     Vector3 newFlagSpot = new Vector3(transform.position.x + flagSide, transform.position.y, transform.position.z);
-                    Instantiate(Flag, newFlagSpot, c.gameObject.transform.rotation,c.gameObject.transform);
+                    Instantiate(Flag, newFlagSpot, c.gameObject.transform.rotation, c.gameObject.transform);
                     newFlag = true;
                     anim.SetBool("newFlag", newFlag);
                     //adds platform to the list
@@ -95,7 +98,7 @@ public class Playermove : MonoBehaviour {
 
                 }
                 return;
-            } 
+            }
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -128,12 +131,12 @@ public class Playermove : MonoBehaviour {
     private void Flip(float h)
     {
         if (h > 0 && !facingRight || h < 0 && facingRight)
-            {
+        {
             facingRight = !facingRight;
             Vector3 theScale = transform.localScale;
 
 
-             theScale.x *= -1;
+            theScale.x *= -1;
 
             transform.localScale = theScale;
         }
@@ -141,9 +144,14 @@ public class Playermove : MonoBehaviour {
 
 
 
+    private void Awake()
+    {
+        Controls = true;
+    }
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         anim = GetComponentInChildren<Animator>();
         anim.SetBool("Grounded", grounded);
         anim.SetBool("Stopped", stopped);
@@ -160,11 +168,61 @@ public class Playermove : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
-        
+        if (Invincibility)
+        {
+            if (IDelay >= 3.0f)
+            {
+                Invincibility = false;
+                ICounter = 0;
+                IDelay = 0;
+                gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                Debug.Log("on");
+            }
+            else
+            {
+                IDelay += Time.fixedDeltaTime;
+                ICounter++;
+                Invincibility = true;
+                gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            }
+
+            if (IDelay <= 2.7f)
+            {
+                if (ICounter % 4 == 0 || ICounter % 5 == 0)
+                {
+                    gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                    Debug.Log("on");
+                }
+                else
+                {
+                    gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
+                    Debug.Log("off");
+                }
+            }
+            else
+            {
+                gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            }
+
+
+
+
+        }
+
+
         //Horzontal walking input
-        hMove = Input.GetAxis("Horizontal");
+        if (Controls == false)
+        {
+            hMove = 0f;
+        }
+        else
+        {
+            hMove = Input.GetAxis("Horizontal");
+        }
+
 
         anim.SetFloat("HorizontalVelocity", Mathf.Abs(hMove));
         if (hMove == 0)
@@ -179,7 +237,7 @@ public class Playermove : MonoBehaviour {
 
 
         //this is the current method of movement
-        transform.position += new Vector3(hMove,0,0) * boostSpeed * walkspeed * Time.deltaTime;
+        transform.position += new Vector3(hMove, 0, 0) * boostSpeed * walkspeed * Time.deltaTime;
         Flip(hMove);
         //The following check is to make the player unable to jump twice without grounding first
         if (groundtouched.Count != 0)
@@ -205,9 +263,24 @@ public class Playermove : MonoBehaviour {
         if ((Input.GetKeyDown(KeyCode.Space) && grounded == true) || (Input.GetKeyDown(KeyCode.Space) && jumpLeft > 0))
         {
             rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * highJumpPower, ForceMode2D.Impulse);
+            if (Controls == true)
+            {
+
+                rb.AddForce(Vector2.up * highJumpPower, ForceMode2D.Impulse);
+            }
             jumpLeft--;
         }
+
+
+        if (Controls == false)
+        {
+
+            transform.position += new Vector3(0, 0, 0);
+        }
+
+
+
+
         if (Input.GetKeyDown(KeyCode.P))
         {
 
@@ -219,35 +292,13 @@ public class Playermove : MonoBehaviour {
             Application.Quit();
         }
 
-        time += Time.deltaTime;
-
-       
-
-        if (Invincibility)
-        {
-            IDelay += Time.fixedDeltaTime;
-            ICounter++;
-
-            if (IDelay >= 3.0f)
-            {
-                Invincibility = false;
-
-            }
-            else
-            {
-                ICounter = 0;
-                IDelay = 0;
-            }
-
-            gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
-            Debug.Log("off");
-            gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
-            Debug.Log("on");
-
-        }
+   
 
 
-           
+
+
+
+
         //////////////////////////////////////////////////
         //// BELOW THIS POINT IS POWER UP INFORMATION ////
         //////////////////////////////////////////////////
@@ -281,19 +332,19 @@ public class Playermove : MonoBehaviour {
 
     public void Boost()
     {
-            if (boostDelay >= 7.5f)
-            {
-                boostActive = false;
-            }
-            if (boostActive)
-            {
-                boostSpeed = 2.0f;
-                boostDelay += Time.fixedDeltaTime;
-            }
-            else
-            {
-                boostSpeed = 1;
-                boostDelay = 0;
-            }
+        if (boostDelay >= 7.5f)
+        {
+            boostActive = false;
+        }
+        if (boostActive)
+        {
+            boostSpeed = 2.0f;
+            boostDelay += Time.fixedDeltaTime;
+        }
+        else
+        {
+            boostSpeed = 1;
+            boostDelay = 0;
+        }
     }
 }

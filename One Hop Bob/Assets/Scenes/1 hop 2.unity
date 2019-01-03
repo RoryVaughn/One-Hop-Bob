@@ -3242,6 +3242,7 @@ MonoBehaviour:
   - {fileID: 1610630889}
   - {fileID: 1795252782}
   - {fileID: 691888488}
+  RedText: {fileID: 129082530}
 --- !u!114 &199507688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30731,6 +30732,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011821036864, guid: 5b210609803658e488f512fc13a6163e, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000010555298808, guid: 5b210609803658e488f512fc13a6163e,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
