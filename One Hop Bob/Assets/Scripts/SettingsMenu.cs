@@ -54,11 +54,13 @@ public class SettingsMenu : MonoBehaviour {
 
     public void PlayGame()
     {
+        Time.timeScale = (1.0f);
         SceneManager.LoadScene("1 hop");
     }
 
     public void level2()
     {
+        Time.timeScale = (1.0f);
         SceneManager.LoadScene("1 hop 2");
     }
 
