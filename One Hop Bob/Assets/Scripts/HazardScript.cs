@@ -17,6 +17,7 @@ public class HazardScript : MonoBehaviour
     public int knockbackCount;
     public int knockbackForce;
     public bool floorDeath;
+    public bool OnlyYKnock;
 
 
 
@@ -39,8 +40,27 @@ public class HazardScript : MonoBehaviour
                 c.GetComponent<Playermove>().Controls = false;
                 c.GetComponent<Playermove>().knockbackCount++;
                 //The following math is to deturmine the directional vector that the knockback should be added to.
-                float Linex = c.gameObject.GetComponent<Playermove>().rb.position.x - gameObject.GetComponent<Rigidbody2D>().position.x;
-                float Liney = c.gameObject.GetComponent<Playermove>().rb.position.y - gameObject.GetComponent<Rigidbody2D>().position.y;
+                float knockX;
+                float knockY;
+                if (OnlyYKnock == true)
+                {
+                    knockX = gameObject.GetComponent<Rigidbody2D>().position.x / 2;
+                    if (c.transform.position.y > gameObject.transform.position.y)
+                    {
+                        knockY = 1f;
+                    }
+                    else
+                    {
+                        knockY = -1f;
+                    }
+                }
+                else
+                {
+                    knockX = gameObject.GetComponent<Rigidbody2D>().position.x;
+                    knockY = gameObject.GetComponent<Rigidbody2D>().position.y;
+                }
+                float Linex = c.gameObject.GetComponent<Playermove>().rb.position.x - knockX;
+                float Liney = c.gameObject.GetComponent<Playermove>().rb.position.y - knockY;
                 Vector2 vector = new Vector2(Linex, Liney);
                 float mag = Mathf.Sqrt((Linex * Linex) + (Liney * Liney));
                 Vector2 Normalized = new Vector2(vector.x / mag, vector.y / mag);
