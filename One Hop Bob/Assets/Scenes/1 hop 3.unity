@@ -1533,6 +1533,11 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 1742183368}
+    - target: {fileID: 114125837682172064, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
+        type: 2}
+      propertyPath: knockbackForce
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 2}
   m_IsPrefabAsset: 0
@@ -3447,6 +3452,9 @@ MonoBehaviour:
   isProjectile: 0
   hitSound: {fileID: 1742183368}
   winTrigger: 0
+  knockbackCount: 0
+  knockbackForce: 0
+  floorDeath: 1
   power: 3
 --- !u!61 &233446198
 BoxCollider2D:
@@ -3889,6 +3897,31 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f470966c163fb44a4b6f58ad6a62d27c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &266160350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1047792590696984, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
+    type: 2}
+  m_PrefabInternal: {fileID: 88150348}
+--- !u!50 &266160354
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266160350}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &268852236
 GameObject:
   m_ObjectHideFlags: 0
@@ -6643,10 +6676,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1023647527885166, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 2}
-      propertyPath: m_Name
-      value: Small Flying Enemy prefab (1)
-      objectReference: {fileID: 0}
+    - target: {fileID: 114125837682172064, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 492006071}
     - target: {fileID: 114321669073077530, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
         type: 2}
       propertyPath: BirdEnter
@@ -6657,16 +6691,15 @@ Prefab:
       propertyPath: BirdAttack
       value: 
       objectReference: {fileID: 1775712311}
-    - target: {fileID: 114321669073077530, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
-        type: 2}
-      propertyPath: attackInt
-      value: 1
+    - target: {fileID: 1023647527885166, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 2}
+      propertyPath: m_Name
+      value: Small Flying Enemy prefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 114125837682172064, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
         type: 2}
-      propertyPath: hitSound
-      value: 
-      objectReference: {fileID: 492006071}
+      propertyPath: knockbackForce
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 2}
   m_IsPrefabAsset: 0
@@ -9357,6 +9390,7 @@ MonoBehaviour:
   boostActive: 0
   boostDelay: 0
   Invincibility: 0
+  knockbackCount: 0
   IDelay: 0
   ICounter: 0
   jumpLeft: 0
@@ -11050,6 +11084,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &665213637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1047792590696984, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536503711}
+--- !u!50 &665213641
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 665213637}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &672977564
 GameObject:
   m_ObjectHideFlags: 0
@@ -22705,22 +22764,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114994666598331648, guid: dac04975baf4a466e8306f8f02c2171e,
         type: 2}
-      propertyPath: hitSound
-      value: 
-      objectReference: {fileID: 492006071}
-    - target: {fileID: 114994666598331648, guid: dac04975baf4a466e8306f8f02c2171e,
-        type: 2}
       propertyPath: Player
       value: 
       objectReference: {fileID: 551669004}
-    - target: {fileID: 4044745889178270, guid: dac04975baf4a466e8306f8f02c2171e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4044745889178270, guid: dac04975baf4a466e8306f8f02c2171e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
+    - target: {fileID: 114994666598331648, guid: dac04975baf4a466e8306f8f02c2171e,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 492006071}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac04975baf4a466e8306f8f02c2171e, type: 2}
   m_IsPrefabAsset: 0
@@ -27088,6 +27139,11 @@ Prefab:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 2058543012}
+    - target: {fileID: 114125837682172064, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
+        type: 2}
+      propertyPath: knockbackForce
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 2}
   m_IsPrefabAsset: 0
@@ -28620,6 +28676,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1614513890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1216577771041908, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
+    type: 2}
+  m_PrefabInternal: {fileID: 88150348}
+--- !u!50 &1614513894
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1614513890}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1615917538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4405671134721822, guid: 0f316f3ea25ad4b4fae31718bcd7719d,
@@ -34830,6 +34911,9 @@ MonoBehaviour:
   isProjectile: 0
   hitSound: {fileID: 1203473480}
   winTrigger: 1
+  knockbackCount: 0
+  knockbackForce: 0
+  floorDeath: 0
   power: 0
 --- !u!61 &1962142234
 BoxCollider2D:

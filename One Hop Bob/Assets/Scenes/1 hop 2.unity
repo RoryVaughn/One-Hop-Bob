@@ -3447,6 +3447,9 @@ MonoBehaviour:
   isProjectile: 0
   hitSound: {fileID: 1742183368}
   winTrigger: 0
+  knockbackCount: 0
+  knockbackForce: 0
+  floorDeath: 1
   power: 3
 --- !u!61 &233446198
 BoxCollider2D:
@@ -9345,6 +9348,7 @@ MonoBehaviour:
   boostActive: 0
   boostDelay: 0
   Invincibility: 0
+  knockbackCount: 0
   IDelay: 0
   ICounter: 0
   jumpLeft: 0
@@ -34818,6 +34822,9 @@ MonoBehaviour:
   isProjectile: 0
   hitSound: {fileID: 1203473480}
   winTrigger: 1
+  knockbackCount: 0
+  knockbackForce: 0
+  floorDeath: 0
   power: 0
 --- !u!61 &1962142234
 BoxCollider2D:
@@ -36436,6 +36443,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2048294538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1216577771041908, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536503711}
+--- !u!50 &2048294540
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048294538}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2051717751
 GameObject:
   m_ObjectHideFlags: 0

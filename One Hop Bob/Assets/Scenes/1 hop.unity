@@ -3329,6 +3329,9 @@ MonoBehaviour:
   isProjectile: 0
   hitSound: {fileID: 1742183368}
   winTrigger: 0
+  knockbackCount: 0
+  knockbackForce: 0
+  floorDeath: 1
   power: 3
 --- !u!61 &233446198
 BoxCollider2D:
@@ -9454,6 +9457,7 @@ MonoBehaviour:
   boostActive: 0
   boostDelay: 0
   Invincibility: 0
+  knockbackCount: 0
   IDelay: 0
   ICounter: 0
   jumpLeft: 0
@@ -22095,6 +22099,9 @@ MonoBehaviour:
   isProjectile: 0
   hitSound: {fileID: 1203473480}
   winTrigger: 1
+  knockbackCount: 0
+  knockbackForce: 0
+  floorDeath: 0
   power: 0
 --- !u!61 &1350992307
 BoxCollider2D:
@@ -33834,6 +33841,9 @@ MonoBehaviour:
   isProjectile: 0
   hitSound: {fileID: 1742183368}
   winTrigger: 0
+  knockbackCount: 0
+  knockbackForce: 0
+  floorDeath: 0
   power: 0
 --- !u!212 &2029748571
 SpriteRenderer:

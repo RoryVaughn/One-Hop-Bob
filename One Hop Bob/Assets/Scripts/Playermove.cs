@@ -39,6 +39,7 @@ public class Playermove : MonoBehaviour
     public float boostDelay;
 
     public bool Invincibility;
+    public int knockbackCount;
     public float IDelay;
     public int ICounter;
     public int jumpLeft;
@@ -179,7 +180,16 @@ public class Playermove : MonoBehaviour
                 ICounter = 0;
                 IDelay = 0;
                 gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
+                knockbackCount = 0;
                 Debug.Log("on");
+            }
+            else if (IDelay >= 0.35f)
+            {
+                Player.GetComponent<Playermove>().Controls = true;
+                IDelay += Time.fixedDeltaTime;
+                ICounter++;
+                Invincibility = true;
+                gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
             }
             else
             {
@@ -292,7 +302,7 @@ public class Playermove : MonoBehaviour
             Application.Quit();
         }
 
-   
+
 
 
 
@@ -315,18 +325,6 @@ public class Playermove : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(true);
         }
 
-        /////////////////////////////////////////////////////////////////////////////////
-        ////BELOW THIS POINT IS DEBUGGING CODE THAT SHOULD BE CHANGED WHEN BUILDING! ////
-        /////////////////////////////////////////////////////////////////////////////////
-
-        //Testing respawn check
-        if (testingRespawnMode)
-        {
-            if (transform.position.y < -1.0f)
-            {
-                transform.position = Respawn;
-            }
-        }
     }
 
 
