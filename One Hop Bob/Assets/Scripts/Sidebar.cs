@@ -16,6 +16,8 @@ public class Sidebar : MonoBehaviour {
     private float playerDis;
 
     Image thisImage;
+    Image[] parent1;
+    Image parent2;
     Color tempcolor;
 
 
@@ -27,6 +29,8 @@ public class Sidebar : MonoBehaviour {
         levelStart = Player.transform.position.y;
         gameObject.transform.position = range[1].transform.position;
         thisImage = GetComponent<Image>();
+        parent1 = GetComponentsInParent<Image>();
+
 
     }
 
@@ -50,9 +54,30 @@ public class Sidebar : MonoBehaviour {
         if (playerDis < 6 && playerDis > 1.5f)
         {
 
+
+            foreach (Image n in parent1)
+            {
+                if (n.gameObject.name == "line")
+                {
+                    tempcolor = n.color;
+                    tempcolor.a = (playerDis / 6);
+                    n.color = tempcolor;
+                }
+                else
+                {
+                    tempcolor = n.color;
+                    tempcolor.a = (playerDis / 60);
+                    n.color = tempcolor;
+                }
+
+
+               
+
+            }
             tempcolor = thisImage.color;
             tempcolor.a = (playerDis / 6);
             thisImage.color = tempcolor;
+           
 
 
         }
@@ -61,6 +86,12 @@ public class Sidebar : MonoBehaviour {
             tempcolor = thisImage.color;
             tempcolor.a = 0;
             thisImage.color = tempcolor;
+            foreach (Image n in parent1)
+            {
+                tempcolor = n.color;
+                tempcolor.a = 0;
+                n.color = tempcolor;
+            }
         }
 
     }
