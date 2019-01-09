@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114810384908353894}
   - component: {fileID: 61296903170062072}
   - component: {fileID: 61271746529980822}
+  - component: {fileID: 50946842656726188}
   m_Layer: 8
   m_Name: 3Spike
   m_TagString: Untagged
@@ -83,16 +84,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1183999882459674}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0.05, y: 0.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: -0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: -8.2, y: 0.35000038, z: 1.1669998}
+  m_LocalScale: {x: 0.6110109, y: 0.6110109, z: 0.61101186}
   m_Children:
   - {fileID: 4985754895818784}
   - {fileID: 4245888059871982}
   - {fileID: 4794067792308702}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 270}
 --- !u!4 &4245888059871982
 Transform:
   m_ObjectHideFlags: 1
@@ -132,6 +133,26 @@ Transform:
   m_Father: {fileID: 4145340018350556}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!50 &50946842656726188
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1183999882459674}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &61271746529980822
 BoxCollider2D:
   m_ObjectHideFlags: 1
