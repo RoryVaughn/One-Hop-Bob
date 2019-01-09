@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Sidebar : MonoBehaviour {
@@ -12,17 +13,20 @@ public class Sidebar : MonoBehaviour {
     float levelStart;
     GameObject Player;
     public Transform[] range;
+    private float playerDis;
+
+    Image thisImage;
+    Color tempcolor;
 
 
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         Player = GameObject.Find("1HopBob");
         levelStart = Player.transform.position.y;
         gameObject.transform.position = range[1].transform.position;
-
+        thisImage = GetComponent<Image>();
 
     }
 
@@ -39,6 +43,25 @@ public class Sidebar : MonoBehaviour {
         avatarYvalue = (18.8f * PercentComplete/100)  + (4f * PercentComplete/100) - 7.5f + mainCam.transform.position.y - 4;
 
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, avatarYvalue, gameObject.transform.position.z);
+
+
+        playerDis = Mathf.Abs(gameObject.transform.position.x - Player.transform.position.x);
+
+        if (playerDis < 6 && playerDis > 1.5f)
+        {
+
+            tempcolor = thisImage.color;
+            tempcolor.a = (playerDis / 6);
+            thisImage.color = tempcolor;
+
+
+        }
+        else if (playerDis <= 1.5f)
+        {
+            tempcolor = thisImage.color;
+            tempcolor.a = 0;
+            thisImage.color = tempcolor;
+        }
 
     }
 }

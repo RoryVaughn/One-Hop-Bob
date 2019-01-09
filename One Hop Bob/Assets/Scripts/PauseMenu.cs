@@ -10,6 +10,8 @@ public class PauseMenu : MonoBehaviour {
     public GameObject SettingsMenuUI;
     public GameObject PurpleText;
 
+
+
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
@@ -44,6 +46,7 @@ public class PauseMenu : MonoBehaviour {
         Time.timeScale = 0.4f;
     }
 
+
     // Update is called once per frame
     void Update () {
 		if(Input.GetKeyDown(KeyCode.Escape))
@@ -59,5 +62,6 @@ public class PauseMenu : MonoBehaviour {
                 Pause();
             }
         }
-	}
+
+    }
 }

@@ -3412,6 +3412,7 @@ GameObject:
   - component: {fileID: 233446196}
   - component: {fileID: 233446198}
   - component: {fileID: 233446197}
+  - component: {fileID: 233446199}
   m_Layer: 0
   m_Name: Falling Kill Box
   m_TagString: Untagged
@@ -3450,6 +3451,7 @@ MonoBehaviour:
   knockbackCount: 0
   knockbackForce: 0
   floorDeath: 1
+  OnlyYKnock: 0
   power: 3
 --- !u!61 &233446198
 BoxCollider2D:
@@ -3476,6 +3478,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &233446199
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 233446195}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &235127865
 GameObject:
   m_ObjectHideFlags: 0
@@ -25202,7 +25224,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Level 1 Complete!
+  m_Text: Level Complete!
 --- !u!222 &1397753806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34825,6 +34847,7 @@ MonoBehaviour:
   knockbackCount: 0
   knockbackForce: 0
   floorDeath: 0
+  OnlyYKnock: 0
   power: 0
 --- !u!61 &1962142234
 BoxCollider2D:
@@ -34835,7 +34858,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.25}
