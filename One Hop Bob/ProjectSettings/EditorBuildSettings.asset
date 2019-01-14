@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1 hop.unity
     guid: cc9c1cb69dbb1cd419319c23aa04889a
+  - enabled: 1
+    path: Assets/Scenes/Level Select.unity
+    guid: 9270389c5f26e4e749b5c25724d7d0d5
+  - enabled: 1
+    path: Assets/Scenes/1 hop 2.unity
+    guid: 6d06f866e2a627e44befefe6ece9e2c5
   m_configObjects: {}

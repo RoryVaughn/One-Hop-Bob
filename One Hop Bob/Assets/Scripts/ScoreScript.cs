@@ -12,8 +12,21 @@ public class ScoreScript : MonoBehaviour {
     public GameObject Player;
     public GameObject[] HealthBar;
     private Slider Bar;
+    public GameObject RedText;
+    private bool Death;
+   
 
     public static float health = 3.0f;
+
+    public void GameOver()
+    {
+        Time.timeScale = (0.3f);
+        Death = true;
+        Player.GetComponentInChildren<Animator>().SetBool("Death", Death);
+        RedText.active = true;
+        Player.GetComponent<Playermove>().Controls = false;
+
+    }
 
 
     public void healthCheck()
@@ -40,14 +53,18 @@ public class ScoreScript : MonoBehaviour {
                 HealthBar[2].active = false;
                 HealthBar[1].active = false;
                 HealthBar[0].active = false;
+                GameOver();
                 break;
         }
     }
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 
 
+        Player = GameObject.FindWithTag("Player");
         score = GameObject.Find("Score Text").GetComponent<Text>();
+
         health = 3.0f;
 
         healthCheck();

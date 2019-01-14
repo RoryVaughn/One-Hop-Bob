@@ -10,7 +10,7 @@ public class FallingPlatform : MonoBehaviour {
     public float Movespeed;
     public Vector3 currentpos;
     public Transform[] points;
-    public bool touched;
+    private bool touched;
     public int target;
     public float platx;
     public float platy;
@@ -20,17 +20,17 @@ public class FallingPlatform : MonoBehaviour {
 
     public float platDir;
 
-    public static bool Shake;
+    private  bool Shake;
     private float bounce;
     private float drop;
-    public static bool shakeActive;
-    public float shakeDelay;
+    private bool shakeActive;
+    private float shakeDelay;
     public Transform[] shakePoints;
     public int shakeTarget;
 
-    public static bool Frozen;
-    public static bool freezeActive;
-    public float freezeDelay;
+    private static bool Frozen;
+    private static bool freezeActive;
+    private float freezeDelay;
 
     void OnCollisionEnter2D(Collision2D c)
     {
@@ -52,7 +52,7 @@ public class FallingPlatform : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        bool touched = false;
+
         platDir = 1;
         bounce = 0;
         drop = 1;
@@ -92,6 +92,7 @@ public class FallingPlatform : MonoBehaviour {
 
             }
             platy = Mathf.MoveTowards(platform.transform.position.y, points[target].position.y, Time.deltaTime * Movespeed);
+            
             if (shakeActive)
             {
                 Shake = true;

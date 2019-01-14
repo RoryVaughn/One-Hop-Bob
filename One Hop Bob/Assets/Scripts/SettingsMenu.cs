@@ -13,37 +13,72 @@ public class SettingsMenu : MonoBehaviour {
 
     public Dropdown resolutionDropdown;
 
+    public bool noSettings;
+
+
+
     Resolution[] resolutions; 
 
     void Start()
     {
-        resolutions = Screen.resolutions;
-
-        resolutionDropdown.ClearOptions();
-
-        //this loops through and adds a computer's own reloutions rather than giving preset ones
-        List<string> choices = new List<string>();
-        int currentRes = 0;
-        for (int i = 0; i < resolutions.Length; i++)
+        if (!noSettings)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            choices.Add(option);
 
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
+
+            resolutions = Screen.resolutions;
+
+            resolutionDropdown.ClearOptions();
+
+            //this loops through and adds a computer's own reloutions rather than giving preset ones
+            List<string> choices = new List<string>();
+            int currentRes = 0;
+            for (int i = 0; i < resolutions.Length; i++)
             {
-                currentRes = i;
+                string option = resolutions[i].width + " x " + resolutions[i].height;
+                choices.Add(option);
+
+                if (resolutions[i].width == Screen.currentResolution.width &&
+                    resolutions[i].height == Screen.currentResolution.height)
+                {
+                    currentRes = i;
+                }
             }
+
+            resolutionDropdown.AddOptions(choices);
+            resolutionDropdown.value = currentRes;
+            resolutionDropdown.RefreshShownValue();
         }
 
-        resolutionDropdown.AddOptions(choices);
-        resolutionDropdown.value = currentRes;
-        resolutionDropdown.RefreshShownValue();
+
     }
 
     public void PlayGame()
     {
+        Time.timeScale = (1.0f);
         SceneManager.LoadScene("1 hop");
+    }
+
+    public void level2()
+    {
+        Time.timeScale = (1.0f);
+        SceneManager.LoadScene("1 hop 2");
+    }
+
+    public void gotoLevelSelect()
+    {
+        Time.timeScale = (1.0f);
+        SceneManager.LoadScene("Level Select");
+    }
+
+    public void levelComplete()
+    {
+        Debug.Log("Level Complete!!!");
+    }
+   
+
+    public void levelSelectBack()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void QuitGame()
