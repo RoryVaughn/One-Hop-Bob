@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1 hop 2.unity
     guid: 6d06f866e2a627e44befefe6ece9e2c5
+  - enabled: 1
+    path: Assets/Scenes/1 hop 3.unity
+    guid: 23898daa1cbaa42bf9647d4474486432
   m_configObjects: {}

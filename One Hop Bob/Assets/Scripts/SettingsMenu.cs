@@ -64,6 +64,12 @@ public class SettingsMenu : MonoBehaviour {
         SceneManager.LoadScene("1 hop 2");
     }
 
+    public void level3()
+    {
+        Time.timeScale = (1.0f);
+        SceneManager.LoadScene("1 hop 3");
+    }
+
     public void gotoLevelSelect()
     {
         Time.timeScale = (1.0f);
