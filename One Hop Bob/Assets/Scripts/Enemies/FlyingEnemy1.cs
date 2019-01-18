@@ -63,14 +63,15 @@ public class FlyingEnemy1 : MonoBehaviour {
                 if (floatMode == true && Launch == false && Lock == true)
                 {
 
-                    //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
+                    //IMPORTANT - To adjust the ordering of the sprite just change the ordering in layer on the prite renderer
                     platy = Mathf.MoveTowards(transform.position.y, points[target].position.y, Time.deltaTime * MoveSpeed);
-                    platz = Mathf.MoveTowards(transform.position.z, points[target].position.z, Time.deltaTime * MoveSpeed);
+                    platz = Mathf.MoveTowards(transform.position.z, points[target].position.z +1, Time.deltaTime * MoveSpeed);
+                    //IMP
                 }
                 else
                 {
 
-                    //IMPORTANT - i need to find a way to do this for all variables of the platoforms position effieciently
+                   
                     platx = Mathf.MoveTowards(transform.position.x, points[target].position.x, Time.deltaTime * MoveSpeed);
                     platy = Mathf.MoveTowards(transform.position.y, points[target].position.y, Time.deltaTime * MoveSpeed);
                     platz = Mathf.MoveTowards(transform.position.z, points[target].position.z, Time.deltaTime * MoveSpeed);
