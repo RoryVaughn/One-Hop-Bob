@@ -84,6 +84,7 @@ public class HazardScript : MonoBehaviour
                 {
                     c.GetComponent<Playermove>().hasShield = false;
                     c.transform.GetChild(1).gameObject.SetActive(false);
+                    c.GetComponent<Playermove>().Controls = true;
                 }
             }
         }
