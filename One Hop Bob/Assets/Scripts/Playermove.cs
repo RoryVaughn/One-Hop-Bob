@@ -217,9 +217,6 @@ public class Playermove : MonoBehaviour
                 gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;
             }
 
-
-
-
         }
 
 
