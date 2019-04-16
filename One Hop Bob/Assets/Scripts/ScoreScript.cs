@@ -14,7 +14,7 @@ public class ScoreScript : MonoBehaviour {
     private Slider Bar;
     public GameObject RedText;
     private bool Death;
-   
+    public GameObject AdDevice;
 
     public static float health = 3.0f;
 
@@ -25,6 +25,7 @@ public class ScoreScript : MonoBehaviour {
         Player.GetComponentInChildren<Animator>().SetBool("Death", Death);
         RedText.active = true;
         Player.GetComponent<Playermove>().Controls = false;
+        AdDevice.GetComponent<UnityAds>().ShowAd();
 
     }
 
@@ -61,7 +62,7 @@ public class ScoreScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-
+        AdDevice = GameObject.FindWithTag("AdDevice");
         Player = GameObject.FindWithTag("Player");
         score = GameObject.Find("Score Text").GetComponent<Text>();
 
