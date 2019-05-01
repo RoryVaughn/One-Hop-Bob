@@ -993,7 +993,7 @@ Transform:
   - {fileID: 1327211499}
   - {fileID: 1563219172}
   m_Father: {fileID: 1490207565}
-  m_RootOrder: 22
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &44256074 stripped
 Transform:
@@ -26465,7 +26465,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Level Complete!
+  m_Text: Level 2 Complete!
 --- !u!222 &1397753806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28043,8 +28043,8 @@ Transform:
   - {fileID: 1619523448}
   - {fileID: 249536106}
   - {fileID: 1599710457}
-  - {fileID: 44075430}
   - {fileID: 821649047}
+  - {fileID: 531527556}
   - {fileID: 1584765403}
   - {fileID: 250343643}
   - {fileID: 680882984}
@@ -28062,8 +28062,8 @@ Transform:
   - {fileID: 1144418695}
   - {fileID: 1099238668}
   - {fileID: 711300282}
-  - {fileID: 531527556}
   - {fileID: 967372740}
+  - {fileID: 44075430}
   - {fileID: 675248711}
   - {fileID: 162248726}
   - {fileID: 1650637424}
