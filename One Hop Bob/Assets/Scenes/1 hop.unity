@@ -4249,10 +4249,6 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 1742183368}
-    - target: {fileID: 4252124779060066, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.22
-      objectReference: {fileID: 0}
     - target: {fileID: 50803971544225270, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
         type: 3}
       propertyPath: m_Mass
@@ -4262,6 +4258,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252124779060066, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
@@ -4768,10 +4768,6 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 1742183368}
-    - target: {fileID: 4252124779060066, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.22
-      objectReference: {fileID: 0}
     - target: {fileID: 50803971544225270, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
         type: 3}
       propertyPath: m_Mass
@@ -4781,6 +4777,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252124779060066, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
@@ -14334,7 +14334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.52
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4507742029118114, guid: 0f316f3ea25ad4b4fae31718bcd7719d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20795,10 +20795,6 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 1742183368}
-    - target: {fileID: 4252124779060066, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.22
-      objectReference: {fileID: 0}
     - target: {fileID: 50803971544225270, guid: 9c621ad7b57dc45e3a7352887bfaf32e,
         type: 3}
       propertyPath: m_Mass
@@ -20808,6 +20804,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252124779060066, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
@@ -32527,12 +32527,12 @@ PrefabInstance:
       propertyPath: hitSound
       value: 
       objectReference: {fileID: 492006071}
-    - target: {fileID: 1047792590696984, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4252124779060066, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047792590696984, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1216577771041908, guid: 9c621ad7b57dc45e3a7352887bfaf32e, type: 3}
